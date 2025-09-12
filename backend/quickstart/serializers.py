@@ -1,5 +1,5 @@
 from django.contrib.auth.models import Group, User
-from backend.quickstart.models import Problem, Solution, QASession
+from backend.quickstart.models import Problem, ProblemQAResult, Solution, QASession, StdQuestion
 from rest_framework import serializers
 
 # Serializers for external hyperlinked models
@@ -47,3 +47,20 @@ class QASessionSerializer(serializers.ModelSerializer):
         fields = ['id', 'question', 'context', 'answer', 'confidence', 'created_at']
         read_only_fields = ['id', 'created_at']
 
+class StdQuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StdQuestion
+        fields = ['id', 'question_text', 'order', 'description']
+        read_only_fields = ['id']
+
+class ProblemQAResultSerializer(serializers.ModelSerializer):
+    problem = ProblemSerializer(read_only = True)
+    solution_level = SolutionSerializer(read_only = True)
+    std_question = StdQuestionSerializer(read_only = True)
+
+    class Meta:
+        model = ProblemQAResult
+        fields = [
+            'id', 'problem', 'solution_level', 'std_question', 'gen_answer', 'confidence', 'created_at'
+        ]
+        read_only_fields = ['id', 'created_at']

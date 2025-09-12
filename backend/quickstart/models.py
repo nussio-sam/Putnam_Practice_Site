@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class Problem(models.Model):
     year = models.IntegerField()
@@ -20,6 +19,7 @@ class Solution(models.Model):
     def __str__(self):
         return f"Solution for {self.problem} (Level {self.hint_level}"
 
+# 
 class QASession(models.Model):
     question = models.TextField()
     question_context = models.TextField()
@@ -32,3 +32,26 @@ class QASession(models.Model):
 
     def __str__(self):
         return f"Q: {self.question} \n A: {self.answer}"
+
+class StdQuestion(models.Model):
+    question_text = models.TextField()
+    order = models.IntegerField()
+    description = models.TextField(help_text = "What this question gives hints for")
+    
+    def __str__(self):
+        return(f"Q:{self.order}: {self.question_text}")
+
+class ProblemQAResult(models.Model):
+    problem = models.ForeignKey(Problem, related_name = 'qa_results' ,on_delete=models.CASCADE)
+    solution_level = models.ForeignKey(Solution, related_name = 'qa_results' ,on_delete = models.CASCADE)
+    std_question = models.ForeignKey(StdQuestion, on_delete = models.CASCADE)
+    gen_answer = models.TextField()
+    confidence = models.FloatField()
+    created_at = models.DateTimeField(auto_now_add = True)
+
+    class Meta:
+        unique_together = ('problem', 'solution_level', 'std_question')
+        ordering = ['problem', 'solution_level__hint_level', 'std_question__order']
+
+    def __str__(self):
+        return(f"{self.problem} - Level {self.solution_level.hint_level} - Q {self.std_question.order}") # type: ignore
