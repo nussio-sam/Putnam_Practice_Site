@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1996",
+  "question_number": 2,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Let $O_1$ and $O_2$ be the centers of $C_1$ and $C_2$, respectively.\n(We are assuming $C_1$ has radius 1 and $C_2$ has radius 3.)\nThen the\ndesired locus is an annulus centered at the midpoint of $O_1O_2$, with\ninner radius 1 and outer radius 2.\n\nFor a fixed point $Q$ on $C_2$, the locus of the midpoints of the\nsegments $PQ$ for $P$ lying on $C_1$ is the image of $C_1$ under a\nhomothety centered at $Q$ of radius $1/2$, which is a circle of radius\n$1/2$. As $Q$ varies, the center of this smaller circle traces out a\ncircle $C_3$ of radius $3/2$ (again by homothety). By considering the two\npositions of $Q$ on the line of centers of the circles, one sees that\n$C_3$ is centered at the midpoint of $O_1O_2$, and the locus is now\nclearly the specified annulus."
+    }
+  ]
+}

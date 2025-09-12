@@ -1,0 +1,12 @@
+{
+  "year": "2017",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We prove that the smallest value of $a$ is 16.\n\nNote that the expression for $N$ can be rewritten as $k(2a+k-1)/2$,\nso that $2N = k(2a+k-1)$. In this expression, $k>1$ by requirement;\n$k < 2a+k-1$ because $a>1$; and obviously $k$ and $2a+k-1$ have opposite parity. Conversely, for any factorization $2N = mn$ with $1<m<n$ and $m,n$ of opposite parity, we obtain an expression of $N$ in the desired form by taking\n$k = m$, $a = (n+1-m)/2$.\n\nWe now note that $2017$ is prime. (On the exam, solvers would have had to verify this by hand.\nSince $2017 < 45^2$, this can be done by trial division by the primes up to 43.)\nFor $2N = 2017(2a+2016)$ not to have another expression of the specified form, it must be the case that\n$2a+2016$ has no odd divisor greater than 1; that is, $2a+2016$ must be a power of 2.\nThis first occurs for $2a+2016=2048$, yielding the claimed result.\n\n\\textbf{Reinterpretation:}\n(by Karl Mahlburg)\nTo avoid $N$ having another representation, for $k = 2, \\dots, 2016$, we must have\n\\[\nN \\not\\equiv \\begin{cases} k/2 & k \\equiv 0 \\pmod{2} \\\\\n0 & k \\equiv 1 \\pmod{2}.\n\\end{cases}\n\\]\nConsequently, $N \\not\\equiv 0 \\pmod{p}$ for any odd prime $p<2017$\nand $N \\equiv 0 \\pmod{1024}$. Since $N$ must be divisible by 2017, this again yields the claimed value of $a$."
+    }
+  ]
+}

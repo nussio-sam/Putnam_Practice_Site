@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1995",
+  "question_number": 1,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Suppose on the contrary that there exist $t_{1}, t_{2} \\in T$\nwith $t_{1}t_{2} \\in U$ and $u_{1}, u_{2} \\in U$ with $u_{1}u_{2} \\in\nT$. Then $(t_{1}t_{2})u_{1}u_{2} \\in U$ while\n$t_{1}t_{2}(u_{1}u_{2}) \\in T$, contradiction."
+    }
+  ]
+}

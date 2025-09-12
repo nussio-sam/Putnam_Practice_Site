@@ -1,0 +1,12 @@
+{
+  "year": "2021",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Yes, it follows that $P(2)$ is a composite integer. (Note: 1 is neither prime nor composite.)\n\nWrite $P(x) = a_0 + a_1 x + \\cdots + a_n x^n$ with $a_i \\in \\{0,1\\}$ and $a_n = 1$.\nLet $\\alpha$ be an arbitrary root of $P$. Since $P(\\alpha) = 0$, $\\alpha$ cannot be a positive real number.\n%In addition, if $\\alpha \\neq 0$ then\n%\\begin{align*}\n%1 &< |a_{n-1} \\alpha^{-1} + \\cdots + a_0 \\alpha^{-n}| \\\\\n%&\\leq |\\alpha|^{-1} + \\cdots + |\\alpha|^{-n}\n%\\end{align*}\n%and so $|\\alpha| < 2$.\n%\nIn addition, if $\\alpha \\neq 0$ then\n\\begin{align*}\n|1 + a_{n-1} \\alpha^{-1}| &= |a_{n-2} \\alpha^{-2} + \\cdots + a_0 \\alpha^{-n}| \\\\\n&\\leq |\\alpha|^{-2} + \\cdots + |\\alpha|^{-n}.\n\\end{align*}\nIf $\\alpha \\neq 0$ and $\\mathrm{Re}(\\alpha) \\geq 0$, then $\\mathrm{Re}(1 + a_{n-1} \\alpha^{-1}) \\geq 1$\nand \n\\[\n1 \\leq |\\alpha|^{-2} + \\cdots + |\\alpha|^{-n} < \\frac{|\\alpha|^{-2}}{1 - |\\alpha|^{-1}};\n\\]\nthis yields $|\\alpha| < (1 + \\sqrt{5})/2$.\n\nBy the same token, if $\\alpha \\neq 0$ then\n\\[\n|1 + a_{n-1} \\alpha^{-1} + a_{n-2} \\alpha^{-2}| \\leq |\\alpha|^{-3} + \\cdots + |\\alpha|^{-n}.\n\\]\nWe deduce from this that $\\mathrm{Re}(\\alpha) \\leq 3/2$ as follows.\n\\begin{itemize}\n\\item\nThere is nothing to check if $\\mathrm{Re}(\\alpha) \\leq 0$.\n\\item\nIf the argument of $\\alpha$ belongs to $[-\\pi/4, \\pi/4]$, then $\\mathrm{Re}(\\alpha^{-1}), \\mathrm{Re}(\\alpha^{-2}) \\geq 0$, so\n\\[\n1 \\leq |\\alpha|^{-3} + \\cdots + |\\alpha|^{-n} < \\frac{|\\alpha|^{-3}}{1 - |\\alpha|^{-1}}.\n\\]\nHence $|\\alpha|^{-1}$ is greater than the unique positive root of $x^3 + x - 1$, which \nis greater than $2/3$. \n\\item\nOtherwise, $\\alpha$ has argument in $(-\\pi/2,\\pi/4) \\cup (\\pi/4,\\pi/2)$,\nso the bound $|\\alpha| < (1 + \\sqrt{5})/2$ implies that $\\mathrm{Re}(\\alpha) < (1 + \\sqrt{5})/(2 \\sqrt{2}) < 3/2$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2001",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "By the quadratic formula, if $P_m(x)=0$, then $x^2=m\\pm\n2\\sqrt{2m}+2$, and hence the four roots of $P_m$ are given by\n$S = \\{\\pm\\sqrt{m}\\pm\\sqrt{2}\\}$. If $P_m$ factors into two nonconstant\npolynomials over the integers, then some subset of $S$ consisting of one\nor two elements form the roots of a polynomial with integer coefficients.\n\nFirst suppose this subset has a single element, say $\\sqrt{m} \\pm \\sqrt{2}$;\nthis element must be a rational number.\nThen $(\\sqrt{m} \\pm \\sqrt{2})^2 = 2 + m \\pm  2 \\sqrt{2m}$ is an integer,\nso $m$ is twice a perfect square, say $m = 2n^2$. But then\n$\\sqrt{m} \\pm \\sqrt{2} = (n\\pm 1)\\sqrt{2}$ is only rational if $n=\\pm 1$,\ni.e., if $m = 2$.\n\nNext, suppose that the subset contains two elements; then we can take\nit to be one of $\\{\\sqrt{m} \\pm \\sqrt{2}\\}$, $\\{\\sqrt{2} \\pm \\sqrt{m}\\}$\nor $\\{\\pm (\\sqrt{m} + \\sqrt{2})\\}$. In all cases, the sum and the product\nof the elements of the\nsubset must be a rational number. In the first case, this means\n$2\\sqrt{m} \\in \\QQ$, so $m$ is a perfect square. In the second case,\nwe have $2 \\sqrt{2} \\in \\QQ$, contradiction. In the third case, we have\n$(\\sqrt{m} + \\sqrt{2})^2 \\in \\QQ$, or $m + 2 + 2\\sqrt{2m} \\in \\QQ$, which\nmeans that $m$ is twice a perfect square.\n\nWe conclude that $P_m(x)$ factors into two nonconstant polynomials over\nthe integers if and only if $m$ is either a square or twice a square.\n\nNote: a more sophisticated interpretation of this argument can be given\nusing Galois theory. Namely, if $m$ is neither a square nor twice a square,\nthen the number fields $\\QQ(\\sqrt{m})$ and $\\QQ(\\sqrt{2})$ are distinct\nquadratic fields, so their compositum is a number field of degree 4, whose\nGalois group acts transitively on $\\{\\pm \\sqrt{m} \\pm \\sqrt{2}\\}$. Thus\n$P_m$ is irreducible."
+    }
+  ]
+}

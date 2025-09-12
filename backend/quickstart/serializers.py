@@ -1,5 +1,5 @@
 from django.contrib.auth.models import Group, User
-from backend.quickstart.models import Problem, Solution
+from backend.quickstart.models import Problem, Solution, QASession
 from rest_framework import serializers
 
 # Serializers for external hyperlinked models
@@ -24,3 +24,26 @@ class SolutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Solution
         id = ['id', 'problem', 'hint_level', 'content', 'created_at']
+
+# Serializers for HuggingFace req/res models
+
+class QAReqSerializer(serializers.Serializer):
+    question = serializers.CharField(max_length = 500, required = True)
+    question_context = serializers.CharField(required = True)
+
+
+class QAResSerializer(serializers.Serializer):
+    answer = serializers.CharField()
+    confidence = serializers.FloatField()
+    start = serializers.IntegerField(allow_null = True)
+    end = serializers.IntegerField(allow_null = True)
+    question = serializers.CharField()
+    question_context = serializers.CharField()
+
+
+class QASessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QASession
+        fields = ['id', 'question', 'context', 'answer', 'confidence', 'created_at']
+        read_only_fields = ['id', 'created_at']
+

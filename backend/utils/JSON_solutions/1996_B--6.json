@@ -1,0 +1,12 @@
+{
+  "year": "1996",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We will prove the claim assuming only that the convex hull of the\npoints $(a_{i}, b_{i})$ contains the origin in its interior. (Thanks\nto Marshall Buck for pointing out that the last three words are\nnecessary in the previous sentence!) Let $u = \\log x, v = \\log\ny$ so that the left-hand side of the given equation is\n\\begin{multline}\n(a_1, b_1) \\exp(a_1 u + b_1 v) + (a_2, b_2) \\exp(a_2 u + b_2 v) + \\\\\n\\cdots + (a_n, b_n) \\exp(a_n u + b_n v).\n\\end{multline}\nNow note that (1) is the gradient of the function\n\\begin{gather*}\nf(u,v) = exp(a_1 u + b_1 v) +\nexp(a_2 u + b_2 v) + \\\\\n\\cdots + exp(a_n u + b_n v),\n\\end{gather*}\nand so it suffices to show $f$ has a critical point. We will in fact\nshow $f$ has a global minimum.\n\nClearly we have\n\\[\nf(u,v) \\geq \\exp\\left( \\max_i (a_i u + b_i v) \\right).\n\\]\nNote that this maximum is positive for $(u,v) \\neq (0,0)$:  if we had\n$a_i u + b_i v < 0$ for all $i$, then the subset $ur + vs < 0$ of the\n$rs$-plane would be a half-plane containing all of the points $(a_i,\nb_i)$, whose convex hull would then not contain the origin, a\ncontradiction.\n\nThe function $\\max_{i} (a_{i}u + b_{i}v)$ is clearly\ncontinuous on the unit circle $u^{2} + v^{2} = 1$, which is compact.\nHence it has a global minimum $M > 0$, and so for all $u,v$,\n\\[\n\\max_{i} (a_{i} u + b_{i} v) \\geq M \\sqrt{u^{2} + v^{2}}.\n\\]\nIn particular, $f \\geq n+1$ on the disk of radius $\\sqrt{(n+1)/M}$.\nSince $f(0,0) = n$, the infimum of $f$ is the same over the entire\n$uv$-plane as over this disk, which again is compact.\nHence $f$ attains its infimal value at some point in the disk,\nwhich is the desired global minimum.\n\nNoam Elkies has suggested an alternate solution as follows: for $r >\n0$, draw the loop traced by (1) as $(u,v)$ travels\ncounterclockwise around the circle $u^2 + v^2 = r^2$. For $r=0$, this\nof course has winding number 0 about any point, but for $r$ large, one\ncan show this loop has winding number 1 about the origin, so somewhere in\nbetween the loop must pass through the origin. (Proving this latter\nfact is a little tricky.)"
+    }
+  ]
+}

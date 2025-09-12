@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "\\textbf{First solution.}\n(based on work of Yufei Zhao)\nSince any sequence of the desired form remains of the desired form upon multiplying each term by 2,\nwe may reduce to the case where $n$ is odd. In this case, take $x = 2^h$ for some\npositive integer $h$ for which $x \\geq n$, and set\n\\begin{align*}\na_0 &= 0\\\\\na_1 &= 1\\\\\na_2 &= 2x+1 = a_1 + 2x \\\\\na_3 &= (x+1)^2 = a_2 + x^2 \\\\\na_4 &= x^n+1 = a_1 + x^n\\\\\na_5 &= n(x+1) = a_4 \\mod a_3\\\\\na_6 &= x \\\\\na_7 &= n = a_5 \\mod a_6.\n\\end{align*}\nWe may pad the sequence to the desired length by taking\n$a_8 = \\cdots = a_{2009} = n$.\n\n\\textbf{Second solution.}\n(by James Merryfield)\nSuppose first that $n$ is not divisible by 3. Recall that since $2$ is a primitive root modulo\n$3^2$, it is also a primitive root modulo $3^h$ for any positive integer $h$. In particular,\nif we choose $h$ so that $3^{2h} > n$, then\nthere exists a positive integer $c$ for which $2^c \\mod 3^{2h} = n$.\nWe now take $b$ to be a positive integer for which $2^b > 3^{2h}$, and then put\n\\begin{align*}\na_0 &= 0\\\\\na_1 &= 1\\\\\na_2 &= 3 = a_1 + 2\\\\\na_3 &= 3 + 2^b \\\\\na_4 &= 2^{2hb} \\\\\na_5 &= 3^{2h} = a_4 \\mod a_3 \\\\\na_6 &= 2^c \\\\\na_7 &= n = a_6 \\mod a_5.\n\\end{align*}\nIf $n$ is divisible by 3, we can force $a_7 = n-1$ as in the above\nconstruction, then put $a_{8} = a_7 + 1 = n$. In both cases, we then pad the sequence\nas in the first solution.\n\n\\textbf{Remark.}\nHendrik Lenstra, Ronald van Luijk, and Gabriele Della Torre\nsuggest the following variant of the first solution requiring only 6 steps.\nFor $n$ odd and $x$ as in the first solution, set\n\\begin{align*}\na_0 &= 0\\\\\na_1 &= 1\\\\\na_2 &= x+1 = a_1 + x\\\\\na_3 &= x^n+x+1 = a_2 + x^n\\\\\na_4 &= x^{(n-1)(\\phi(a_3)-1)}\\\\\na_5 &= \\frac{x^n+1}{x+1} = a_4 \\mod a_3 \\\\\na_6 &= n = a_5 \\mod a_2.\n\\end{align*}\nIt seems unlikely that a shorter solution can be constructed without relying on\nany deep number-theoretic conjectures."
+    }
+  ]
+}

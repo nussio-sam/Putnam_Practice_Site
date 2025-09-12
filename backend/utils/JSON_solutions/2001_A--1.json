@@ -1,0 +1,12 @@
+{
+  "year": "2001",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The hypothesis implies $((b*a)*b)*(b*a)=b$ for all $a,b\\in S$\n(by replacing $a$ by $b*a$), and\nhence $a*(b*a)=b$ for all $a,b\\in S$ (using $(b*a)*b = a$)."
+    }
+  ]
+}

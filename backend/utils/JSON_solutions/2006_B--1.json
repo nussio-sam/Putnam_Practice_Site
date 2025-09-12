@@ -1,0 +1,12 @@
+{
+  "year": "2006",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The ``curve'' $x^3 + 3xy + y^3 - 1 = 0$ is actually reducible, because the\nleft side factors as\n\\[\n(x+y-1)(x^2 -xy + y^2 + x + y + 1).\n\\]\nMoreover, the second factor is\n\\[\n\\frac{1}{2} ((x+1)^2 + (y+1)^2 + (x-y)^2),\n\\]\nso it only vanishes at $(-1,-1)$. Thus the curve in question consists of the\nsingle point $(-1,-1)$ together with the line $x+y=1$. To form a triangle\nwith three points on this curve, one of its vertices must be $(-1,-1)$.\nThe other two vertices lie on the line $x+y=1$, so the length of the altitude\nfrom $(-1,-1)$ is the distance from $(-1,-1)$ to $(1/2,1/2)$, or\n$3 \\sqrt{2}/2$. The area of an equilateral triangle of height $h$ is\n$h^2 \\sqrt{3}/3$, so the desired area is\n$3 \\sqrt{3}/2$.\n\n\\textbf{Remark:} The factorization used above is a special case of the fact\nthat\n\\begin{align*}\n&x^3 + y^3 + z^3 - 3xyz \\\\\n&= (x+y+z)(x+\\omega y + \\omega^2 z)(x + \\omega^2 y\n+ \\omega z),\n\\end{align*}\nwhere $\\omega$ denotes a primitive cube root of unity. That fact in turn follows\nfrom the evaluation of the determinant of the \\emph{circulant matrix}\n\\[\n\\begin{pmatrix} x & y & z \\\\ z & x & y \\\\ y & z & x\n\\end{pmatrix}\n\\]\nby reading off the eigenvalues of the eigenvectors\n$(1, \\omega^i, \\omega^{2i})$ for $i=0,1,2$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1997",
+  "question_number": 4,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "In order to have $\\psi(x) = a \\phi(x)$ for all $x$, we must in\nparticular have this for $x = e$, and so we take $a = \\phi(e)^{-1}$.\nWe first note that\n\\[\n\\phi(g) \\phi(e) \\phi(g^{-1}) = \\phi(e) \\phi(g) \\phi(g^{-1})\n\\]\nand so $\\phi(g)$ commutes with $\\phi(e)$ for all $g$. Next, we note that\n\\[\n\\phi(x) \\phi(y) \\phi(y^{-1}x^{-1}) = \\phi(e) \\phi(xy) \\phi(y^{-1}x^{-1})\n\\]\nand using the commutativity of $\\phi(e)$, we deduce\n\\[\n\\phi(e)^{-1} \\phi(x) \\phi(e)^{-1} \\phi(y) = \\phi(e)^{-1} \\phi(xy)\n\\]\nor $\\psi(xy) = \\psi(x) \\psi(y)$, as desired."
+    }
+  ]
+}

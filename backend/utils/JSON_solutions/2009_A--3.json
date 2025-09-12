@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The limit is $0$; we will show this by checking that $d_n = 0$ for all $n \\geq 3$.\nStarting from the given matrix, add the third column to the first column; this does not change the\ndeterminant. However, thanks to the identity\n$\\cos x + \\cos y = 2 \\cos \\frac{x+y}{2} \\cos \\frac{x-y}{2}$,\nthe resulting matrix has the form\n\\[\n \\begin{pmatrix} 2 \\cos 2 \\cos 1 & \\cos 2 & \\cdots \\\\\n  2 \\cos (n+2) \\cos 1 & \\cos (n+2) & \\cdots \\\\\n  2 \\cos (2n+2) \\cos 1 & 2 \\cos (2n+2) & \\cdots \\\\\n\\vdots & \\vdots & \\ddots\n \\end{pmatrix}\n\\]\nwith the first column being a multiple of the second. Hence $d_n = 0$.\n\n\\textbf{Remark.}\nAnother way to draw the same conclusion is to observe that the given matrix is the sum\nof the two rank 1 matrices $A_{jk} = \\cos (j-1)n \\cos k$ and $B_{jk} = -\\sin (j-1)n \\sin k$,\nand so has rank at most 2. One can also use the matrices\n$A_{jk} = e^{i((j-1)n+k)}$, $B_{jk} = e^{-i(j-1)n+k}$."
+    }
+  ]
+}

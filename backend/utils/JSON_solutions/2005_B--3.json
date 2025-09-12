@@ -1,0 +1,12 @@
+{
+  "year": "2005",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "\\textbf{First solution:}\nThe functions are precisely $f(x) = cx^d$ for $c,d > 0$ arbitrary\nexcept that we must take $c=1$ in case $d=1$. To see that these work,\nnote that $f'(a/x) = d c (a/x)^{d-1}$ and $x/f(x) = 1/(c x^{d-1})$,\nso the given equation holds if and only if $d c^2 a^{d-1} = 1$. If\n$d \\neq 1$, we may solve for $a$ no matter what $c$ is; if\n$d=1$, we must have $c=1$. (Thanks to Brad Rodgers for pointing out\nthe $d=1$ restriction.)\n\nTo check that these are all solutions,\nput $b = \\log(a)$ and $y = \\log(a/x)$; rewrite the given equation as\n\\[\nf(e^{b-y}) f'(e^y) = e^{b-y}.\n\\]\nPut\n\\[\ng(y) = \\log f(e^y);\n\\]\nthen the given equation rewrites as\n\\[\ng(b-y) + \\log g'(y) + g(y) - y = b-y,\n\\]\nor\n\\[\n\\log g'(y) = b -g(y) - g(b-y).\n\\]\nBy the symmetry of the right side,\nwe have $g'(b-y) = g'(y)$. Hence the function\n$g(y) + g(b-y)$ has zero derivative and so is constant,\nas then is $g'(y)$.\nFrom this we deduce that $f(x) = cx^d$ for some $c,d$, both\nnecessarily positive since $f'(x) > 0$ for all $x$.\n\n\\textbf{Second solution:}\n(suggested by several people)\nSubstitute $a/x$ for $x$ in the given equation:\n\\[\nf'(x) = \\frac{a}{xf(a/x)}.\n\\]\nDifferentiate:\n\\[\nf''(x) = - \\frac{a}{x^2 f(a/x)}\n+ \\frac{a^2 f'(a/x)}{x^3 f(a/x)^2}.\n\\]\nNow substitute to eliminate evaluations at $a/x$:\n\\[\nf''(x) = - \\frac{f'(x)}{x}\n+ \\frac{f'(x)^2}{f(x)}.\n\\]\nClear denominators:\n\\[\nx f(x) f''(x) + f(x) f'(x) = x f'(x)^2.\n\\]\nDivide through by $f(x)^2$ and rearrange:\n\\[\n0 = \\frac{f'(x)}{f(x)} + \\frac{x f''(x)}{f(x)} - \\frac{x f'(x)^2}{f(x)^2}.\n\\]\nThe right side is the derivative of $x f'(x)/f(x)$, so that quantity\nis constant. That is, for some $d$,\n\\[\n\\frac{f'(x)}{f(x)} = \\frac{d}{x}.\n\\]\nIntegrating yields $f(x) = cx^d$, as desired."
+    }
+  ]
+}

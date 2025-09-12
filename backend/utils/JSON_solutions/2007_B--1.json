@@ -1,0 +1,12 @@
+{
+  "year": "2007",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The problem fails if $f$ is allowed to be constant, e.g., take $f(n) = 1$.\nWe thus assume that $f$ is nonconstant.\nWrite $f(n) = \\sum_{i=0}^d a_i n^i$ with $a_i > 0$. Then\n\\begin{align*}\nf(f(n)+1) &= \\sum_{i=0}^d a_i (f(n) + 1)^i \\\\\n&\\equiv f(1) \\pmod{f(n)}.\n\\end{align*}\nIf $n = 1$, then this implies that $f(f(n)+1)$ is divisible by $f(n)$.\nOtherwise, $0 < f(1) < f(n)$ since $f$ is nonconstant and has positive\ncoefficients, so $f(f(n)+1)$ cannot be divisible by $f(n)$."
+    }
+  ]
+}

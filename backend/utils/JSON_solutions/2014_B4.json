@@ -1,0 +1,12 @@
+{
+  "year": "2014",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Define the polynomial $f_n(x) = \\sum_{k=0}^n 2^{k(n-k)} x^k$.\nSince\n\\[\nf_1(x) = 1+x, f_2(x) = 1 + 2x + x^2 = (1+x)^2,\n\\]\nthe claim holds for for $n=1,2$. For $n \\geq 3$, we show that the quantities\n\\[\nf_n(-2^{-n}), f_n(-2^{-n+2}), \\dots, f_n(-2^n)\n\\]\nalternate in sign; by the intermediate value theorem, this will imply that $f_n$ has a root in each of the $n$ intervals $(- 2^{-n}, - 2^{-n+2}), \\dots, (- 2^{n-2}, -2^n)$,\nforcing $f_n$ to have as many distinct real roots as its degree.\n\nFor $j \\in \\{0,\\dots,n\\}$, group the terms of $f_n(x)$ as\n\\begin{align*}\n&\\cdots \\\\\n&+ 2^{(j-5)(n-j+5)} x^{j-5} + 2^{(j-4)(n-j+4)} x^{j-4} \\\\\n&+ 2^{(j-3)(n-j+3)} x^{j-3} + 2^{(j-2)(n-j+2)} x^{j-2} \\\\\n&+ 2^{(j-1)(n-j+1)} x^{j-1} + 2^{j(n-j)} x^j + 2^{(j+1)(n-j-1)} x^{j+1} \\\\\n&+  2^{(j+2)(n-j-2)} x^{j+2} + 2^{(j+3)(n-j-3)} x^{j+3} \\\\\n&+2^{(j+4)(n-j-4)} x^{j+4} + 2^{(j+5)(n-j-5)} x^{j+5} \\\\\n& \\cdots.\n\\end{align*}\n\nDepending on the parity of $j$ and of $n-j$, there may be a single monomial left on each end. When evaluating at $x =- 2^{-n+2j}$,\nthe trinomial evaluates to $0$. In the binomials preceding the trinomial, the right-hand term dominates, so each of these binomials contributes with the sign of $x^{j-2k}$, which is $(-1)^j$. In the binomials following the trinomial, the left-hand term dominates, so again the contribution has sign $(-1)^j$.\n\nAny monomials which are left over on the ends also contribute with sign $(-1)^j$. Since $n \\geq 3$, there exists at least one contribution other than the trinomial, so $f_n(- 2^{-n+2j})$ has overall sign $(-1)^j$, proving the claimed alternation.\n\n\\noindent\n\\textbf{Remark:} Karl Mahlburg suggests an alternate interpretation of the preceding algebra: write $2^{-j^2} f_n(2^{-n+2j})$ as\n\\begin{align*}\n&2^{-j^2} - 2^{-(j-1)^2} + \\cdots + (-1)^{j-1} 2^{-1} + (-1)^j 2^{-1}\\\\\n+ &(-1)^j 2^{-1} + (-1)^{j+1} 2^{-1} + (-1)^{j+2} 2^{-2} + \\cdots,\n\\end{align*}\nwhere the two central terms $(-1)^j 2^{-1}$ arise from splitting the term arising from $x^j$. Then each row is an alternating series whose sum carries the sign of $(-1)^j$ unless it has only two terms. Since $n \\geq 3$, one of the two sums is forced to be nonzero.\n\n\\noindent\n\\textbf{Remark:} One of us (Kedlaya) received this problem and solution from David Speyer in 2009 and submitted it to the problem committee."
+    }
+  ]
+}

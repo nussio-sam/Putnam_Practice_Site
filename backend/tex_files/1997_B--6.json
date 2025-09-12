@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1997",
+  "question_number": 6,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $25/13$.  Place the triangle on the cartesian plane so\nthat its vertices are at $C=(0,0), A=(0,3), B=(4,0)$.  Define also the points \n$D=(20/13,24/13),$ and $E=(27/13,0)$. We then compute that\n\\begin{align*}\n\\frac{25}{13} &= AD=BE=DE\\\\\n\\frac{27}{13} &= BC - CE = BE < BC \\\\\n\\frac{39}{13} &= AC < \\sqrt{AC^2 + CE^2} = AE \\\\\n\\frac{40}{13} &= AB - AD = BD < AB\n\\end{align*}\nand that $AD < CD$. In any dissection of the triangle into four parts, some two of $A,B,C,D,E$ must belong to the same part, forcing the least diameter to be at least $25/13$.\n\nWe now exhibit a dissection with least diameter $25/13$. (Some\nvariations of this dissection are possible.) Put $F = (15/13, 19/13)$,\n$G = (15/13, 0)$, $H = (0, 19/13)$, $J = (32/15, 15/13)$,\nand divide $ABC$ into the convex polygonal regions $ADFH$, $BEJ$, $CGFH$,\n$DFGEJ$. \nTo check that this dissection has least diameter $25/13$, it suffices (by the following remark) to check that the distances\n\\begin{gather*}\nAD, AF, AH, BE, BJ, DE, CF, CG, CH, \\\\\nDF, DG, DH, DJ, EF, EG, EJ, FG, FH, FJ, GJ\n\\end{gather*}\nare all at most $25/13$. This can be checked by a long numerical calculation, which we omit in favor of some shortcuts: note that $ADFH$ and $BEJ$ are contained in\ncircular sectors centered at $A$ and $B$, respectively, of radius\n$25/13$ and angle less than $\\pi/3$, while $CGFH$ is a rectangle with diameter $CF < 25/13$.\n\n\\noindent\n\\textbf{Remark.} The preceding argument uses implicitly the fact that for $P$ a simple closed polygon in the plane, if we let $S$ denote the set of points on or within $P$, then  the maximum distance between two points of $S$ occurs between some pair of vertices of $P$.\nThis is an immediate consequence of the compactness of $S$ (which guarantees the existence of a maximum) and the convexity of the function taking $(x,y) \\in S \\times S$ to the squared distance between $x$ and $y$ (which is obvious in terms of Cartesian coordinates)."
+    }
+  ]
+}

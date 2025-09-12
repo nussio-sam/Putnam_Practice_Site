@@ -1,0 +1,12 @@
+{
+  "year": "2006",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We change to cylindrical coordinates, i.e., we put $r = \\sqrt{x^2 + y^2}$.\nThen the given inequality is equivalent to\n\\[\nr^2 + z^2 + 8 \\leq 6r,\n\\]\nor\n\\[\n(r-3)^2 + z^2 \\leq 1.\n\\]\nThis defines a solid of revolution (a solid torus); the area being rotated\nis the disc $(x-3)^2 + z^2 \\leq 1$ in the $xz$-plane. By Pappus's theorem,\nthe volume of this equals the area of this disc, which is $\\pi$, times the\ndistance through which the center of mass is being rotated, which is $(2\\pi)3$.\nThat is, the total volume is $6 \\pi^2$."
+    }
+  ]
+}

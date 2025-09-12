@@ -1,0 +1,12 @@
+{
+  "year": "2001",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Note that $g(x) = g(y)$ implies that $g(g(x)) = g(g(y))$ and hence\n$x = y$ from the given equation. That is, $g$ is injective. Since $g$\nis also continuous, $g$ is either strictly increasing or strictly\ndecreasing. Moreover, $g$ cannot tend to a finite limit $L$ as $x \\to\n+\\infty$, or else we'd have $g(g(x)) - ag(x) = bx$, with the left side\nbounded and the right side unbounded. Similarly, $g$ cannot tend to\na finite limit as $x \\to -\\infty$. Together with monotonicity, this\nyields that $g$ is also surjective.\n\nPick $x_0$ arbitrary, and define $x_n$ for all $n \\in \\ZZ$ recursively\nby $x_{n+1} = g(x_n)$ for $n > 0$, and $x_{n-1} = g^{-1}(x_n)$ for $n<0$.\nLet $r_1 = (a + \\sqrt{a^2+4b})/2$ and $r_2 = (a - \\sqrt{a^2+4b})/2$ and\n$r_2$ be the roots of $x^2 - ax-b = 0$, so that $r_1 > 0 >\nr_2$ and $1 > |r_1| > |r_2|$. Then there exist $c_1, c_2 \\in \\RR$ such that\n$x_n = c_1 r_1^n + c_2 r_2^n$ for all $n \\in \\ZZ$.\n\nSuppose $g$ is strictly increasing. If $c_2 \\neq 0$ for some choice of\n$x_0$, then $x_n$ is dominated by $r_2^n$ for $n$ sufficiently\nnegative. But taking $x_n$ and $x_{n+2}$ for $n$ sufficiently negative of the\nright parity, we get $0 < x_n < x_{n+2}$ but $g(x_n) > g(x_{n+2})$,\ncontradiction. Thus $c_2 = 0$; since $x_0 = c_1$\nand $x_1 = c_1 r_1$, we have $g(x) = r_1 x$ for all $x$.\nAnalogously, if $g$ is strictly decreasing, then $c_2 = 0$ or else\n$x_n$ is dominated by $r_1^n$ for $n$ sufficiently positive. But taking\n$x_n$ and $x_{n+2}$ for $n$ sufficiently positive of the right parity,\nwe get $0 < x_{n+2} <x_n$ but $g(x_{n+2}) < g(x_n)$, contradiction.\nThus in that case, $g(x) = r_2 x$ for all $x$."
+    }
+  ]
+}

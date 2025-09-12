@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1995",
+  "question_number": 6,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "View this as a random walk/Markov process with states $(i,j,k)$ the\ntriples of integers with sum 0, corresponding to the difference\nbetween the first, second and third rows with their average (twice\nthe number of columns). Adding a new column adds on a random\npermutation of the vector $(1,0,-1)$. I prefer to identify the\ntriple $(i,j,k)$ with the point $(i-j) + (j-k)\\omega +\n(k-i)\\omega^{2}$ in the plane, where $\\omega$ is a cube root of\nunity. Then adding a new column corresponds to moving to one of the\nsix neighbors of the current position in a triangular lattice.\n\nWhat we'd like to argue is that for large enough $n$, the ratio of\nthe probabilities of being in any two particular states goes to 1.\nThen in fact, we'll see that eventually, about six times as many\nmatrices have $a=b-1,b=c-1$ than $a=b=c$. This is a pain to prove,\nthough, and in fact is way more than we actually need.\n\nLet $C_{n}$ and $A_{n}$ be the probability that we are at the origin,\nor at a particular point adjacent to the origin, respectively. Then\n$C_{n+1} = A_{n}$. (In fact, $C_{n+1}$ is $1/6$ times the sum of the\nprobabilities of being at each neighbor of the origin at time $n$, but\nthese are all $A_{n}$.) So the desired result, which is that\n$C_{n}/A_{n} \\geq 2/3$ for some large $n$, is equivalent to\n$A_{n+1}/A_{n} \\geq 2/3$.\n\nSuppose on the contrary that this is not the case; then $A_{n} < c\n(2/3)^{n}$ for some constant $n$. However, if $n=6m$, the probability\nthat we chose each of the six types of moves $m$ times is already\n$(6m)!/[m!^{6} 6^{6m}]$, which by Stirling's approximation is\nasymptotic to a constant times $m^{-5/2}$. This term alone is bigger\nthan $c (2/3)^{n}$, so we must have $A_{n+1}/A_{n} \\geq 2/3$ for\nsome $n$. (In fact, we must have $A_{n+1}/A_{n} \\geq 1-\\epsilon$ for\nany $\\epsilon>0$.)"
+    }
+  ]
+}

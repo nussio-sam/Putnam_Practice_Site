@@ -1,0 +1,12 @@
+{
+  "year": "1996",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Consider a $1 \\times n$ checkerboard, in which we write an $n$-letter\nstring, one letter per square. If the string is balanced, we can cover\neach pair of adjacent squares containing the same letter with a $1\n\\times 2$ domino, and these will not overlap (because no three in a\nrow can be the same). Moreover, any domino is separated from the next\nby an even number of squares, since they must cover opposite letters,\nand the sequence must alternate in between.\n\nConversely, any arrangement of dominoes where adjacent dominoes are\nseparated by an even number of squares corresponds to a unique\nbalanced string, once we choose whether the string starts with $X$ or\n$O$. In other words, the number of balanced strings is twice the\nnumber of acceptable domino arrangements.\n\nWe count these arrangements by numbering the squares $0,1,\\dots,n-1$\nand distinguishing whether the dominoes start on even or odd numbers.\nOnce this is decided, one simply chooses whether or not to put a\ndomino in each eligible position. Thus\nwe have $2^{\\lfloor n/2 \\rfloor}$ arrangements in the first case and $2^{\\lfloor\n(n-1)/2 \\rfloor}$ in the second, but note that the case of no dominoes has\nbeen counted twice. Hence the number of balanced strings is\n\\[\n2^{\\lfloor (n+2)/2 \\rfloor} + 2^{\\lfloor (n+1)/2 \\rfloor} - 2.\n\\]"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2008",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Barbara wins using one of the following strategies.\n\n\\textbf{First solution:}\nPair each entry of the first row with the entry directly below it in\nthe second row. If Alan ever writes a number in one of the first two\nrows, Barbara writes the same number in the other entry in the pair.\nIf Alan writes a number anywhere other than the first two rows, Barbara\ndoes likewise.\nAt the end, the resulting matrix will have two identical rows, so its\ndeterminant will be zero.\n\n\\textbf{Second solution:} (by Manjul Bhargava)\nWhenever Alan writes a number $x$ in an entry in some row, Barbara writes\n$-x$ in some other entry in the same row.\nAt the end, the resulting matrix will have all rows summing to zero,\nso it cannot have full rank."
+    }
+  ]
+}

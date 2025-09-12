@@ -1,0 +1,12 @@
+{
+  "year": "2011",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We claim that $(c,L) = (-1,2/\\pi)$ works.\nWrite $f(r) = \\int_0^{\\pi/2} x^r\\sin x\\,dx$. Then\n\\[\nf(r)  < \\int_0^{\\pi/2} x^r\\,dx = \\frac{(\\pi/2)^{r+1}}{r+1}\n\\]\nwhile since $\\sin x \\geq 2x/\\pi$ for $x \\leq \\pi/2$,\n\\[\nf(r) > \\int_0^{\\pi/2} \\frac{2x^{r+1}}{\\pi} \\,dx = \\frac{(\\pi/2)^{r+1}}{r+2}.\n\\]\nIt follows that\n\\[\n\\lim_{r\\to\\infty} r \\left(\\frac{2}{\\pi}\\right)^{r+1} f(r) = 1,\n\\]\nwhence\n\\[\n\\lim_{r\\to\\infty} \\frac{f(r)}{f(r+1)} = \\lim_{r\\to\\infty}\n\\frac{r(2/\\pi)^{r+1}f(r)}{(r+1)(2/\\pi)^{r+2}f(r+1)} \\cdot\n\\frac{2(r+1)}{\\pi r} = \\frac{2}{\\pi}.\n\\]\n\nNow by integration by parts, we have\n\\[\n\\int_0^{\\pi/2} x^r\\cos x\\,dx = \\frac{1}{r+1} \\int_0^{\\pi/2} x^{r+1} \\sin x\\,dx\n    = \\frac{f(r+1)}{r+1}.\n\\]\nThus setting $c = -1$ in the given limit yields\n\\[\n\\lim_{r\\to\\infty} \\frac{(r+1)f(r)}{r f(r+1)} =\n\\frac{2}{\\pi},\n\\]\nas desired."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2021",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We can check directly that $R_3=R_4=1$ are Virahanka--Fibonacci numbers; henceforth we will assume $m \\geq 5$.\n\nDenote the product $\\prod_{k=1}^{F_m-1} k^k$ by $A$. Note that if $F_m$ is composite, say $F_m = ab$ for $a,b>1$ integers, then $A$ is divisible by $a^a b^b$ and thus by $F_m=ab$; it follows that $R_m=0=F_0$ when $F_m$ is composite.\n\nNow suppose that $F_m$ is prime. Since $F_{2n} = F_n(F_{n+1}+F_{n-1})$ for all $n$, $F_m$ is composite if $m>4$ is even; thus we must have that $m$ is odd. Write $p=F_m$, and use $\\equiv$ to denote congruence $\\pmod p$. Then we have\n\\[\nA = \\prod_{k=1}^{p-1} (p-k)^{p-k} \\equiv \\prod_{k=1}^{p-1} (-k)^{p-k} = (-1)^{p(p-1)/2} \\prod_{k=1}^{p-1} k^{p-k}\n\\]\nand consequently\n\\begin{align*}\nA^2 &\\equiv (-1)^{p(p-1)/2} \\prod_{k=1}^{p-1} (k^k k^{p-k}) \\\\\n&= (-1)^{p(p-1)/2}((p-1)!)^p \\\\\n&\\equiv (-1)^{p(p+1)/2},\n\\end{align*}\nwhere the final congruence follows from Wilson's Theorem. Now observe that when $m$ is odd, $p=F_m$ must be congruent to either $1$ or $2 \\pmod{4}$: this follows from inspection of the Virahanka--Fibonacci sequence mod $4$, which has period $6$: $1,1,2,3,1,0,1,1,\\ldots$. It follows that $A^2 \\equiv (-1)^{p(p+1)/2} = -1$.\n\nOn the other hand, by the Kepler--Cassini identity\n\\[\nF_n^2 = (-1)^{n+1} + F_{n-1}F_{n+1}\n\\]\nwith $n=m-1$, we have $F_{m-1}^2 \\equiv (-1)^m = -1$. Thus we have\n$0 \\equiv A^2 - F_{m-1}^2 \\equiv (A-F_{m-1})(A-F_{m-2})$. Since $p$ is prime, it must be the case that either $A=F_{m-1}$ or $A=F_{m-2}$, and we are done.\n\n\\noindent\n\\textbf{Remark.}\nThe Kepler--Cassini identity first appears in a letter of Kepler from 1608.\nNoam Elkies has scanned the \\href{https://people.math.harvard.edu/~elkies/Kepler_XVI_p157.jpg}{relevant page of Kepler's collected works} (slightly NSFW if your boss can read Latin)."
+    }
+  ]
+}

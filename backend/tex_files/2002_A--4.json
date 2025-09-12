@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\2002",
+  "question_number": 4,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "(partly due to David Savitt)\nPlayer 0 wins with optimal play. In fact, we prove that Player 1 cannot\nprevent Player 0 from creating a row of all zeroes, a column of all\nzeroes, or a $2 \\times 2$ submatrix of all zeroes. Each of these forces\nthe determinant of the matrix to be zero.\n\nFor $i,j=1, 2,3$, let $A_{ij}$ denote the position in row $i$ and\ncolumn $j$. Without loss of generality, we may assume that Player\n1's first move is at $A_{11}$. Player 0 then plays at $A_{22}$:\n\\[\n\\begin{pmatrix}\n1 & * & * \\\\\n* & 0 & * \\\\\n* & * & *\n\\end{pmatrix}\n\\]\nAfter Player 1's second move, at least one of $A_{23}$ and $A_{32}$\nremains vacant. Without loss of generality, assume $A_{23}$ remains\nvacant; Player 0 then plays there.\n\nAfter Player 1's third move, Player 0 wins by playing at $A_{21}$ if that\nposition is unoccupied. So assume instead that Player 1 has played there.\nThus of Player 1's three moves so far, two are at $A_{11}$ and $A_{21}$.\nHence for $i$ equal to one of 1 or 3, and for $j$ equal to one of 2 or 3,\nthe following are both true:\n\\begin{enumerate}"
+    }
+  ]
+}

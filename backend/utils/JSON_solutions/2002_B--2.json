@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "(Note: the problem statement assumes that all polyhedra are connected\nand that no two edges share more than one face,\nso we will do likewise. In particular, these are true for all convex\npolyhedra.)\nWe show that in fact the first player can win on the third move.\nSuppose the polyhedron has a face $A$ with at least four edges. If\nthe first player plays there first, after the second player's first move\nthere will be three consecutive faces $B,C,D$ adjacent to $A$ which\nare all unoccupied. The first player wins by playing in $C$; after\nthe second player's second move, at least one of $B$ and $D$ remains\nunoccupied, and either is a winning move for the first player.\n\nIt remains to show that the polyhedron has a face with at least four\nedges. (Thanks to Russ Mann for suggesting the following argument.)\nSuppose on the contrary that each face has only three edges.\nStarting with any face $F_1$ with vertices $v_1, v_2, v_3$, let\n$v_4$ be the other endpoint of the third edge out of $v_1$. Then\nthe faces adjacent to $F_1$ must have vertices $v_1, v_2, v_4$;\n$v_1, v_3, v_4$; and $v_2, v_3, v_4$. Thus $v_1, v_2, v_3, v_4$ form\na polyhedron by themselves, contradicting the fact that the given\npolyhedron is connected and has at least five vertices.\n(One can also deduce this using Euler's formula\n$V - E + F = 2 - 2g$, where $V,E,F$ are the numbers of vertices,\nedges and faces, respectively, and $g$ is the genus of the polyhedron.\nFor a convex polyhedron, $g=0$ and you get the ``usual'' Euler's formula.)\n\nNote: Walter Stromquist points out the following counterexample if\none relaxes the assumption that a pair of faces may not share multiple\nedges. Take a tetrahedron and remove a smaller tetrahedron from the\ncenter of an edge; this creates two small triangular faces and turns two\nof the original faces into hexagons. Then the second player can draw\nby signing one of the hexagons, one of the large triangles, and one\nof the small triangles. (He does this by ``mirroring'': wherever the first\nplayer signs, the second player signs the other face of the same type.)"
+    }
+  ]
+}

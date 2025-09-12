@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We disprove the assertion using the example\n\\[\nf(x,y) = 3(1 + y)(2x-1)^2 -y.\n\\]\nWe have $b-a = d-c = 0$ because the identity $f(x,y) = f(1-x,y)$ forces $a=b$,\nand because\n\\begin{align*}\nc &= \\int_0^1 3(2x-1)^2\\,dx = 1, \\\\\nd &= \\int_0^1 (6(2x-1)^2-1)\\,dx = 1.\n\\end{align*}\nMoreover, the partial derivatives\n\\begin{align*}\n \\frac{\\partial f}{\\partial x}(x_0,y_0) &= 3(1+y_0)(8x_0-4) \\\\\n\\frac{\\partial f}{\\partial y}(x_0,y_0) &= 3(2x_0-1)^2-1.\n\\end{align*}\nhave no common zero in $(0,1)^2$. Namely,\nfor the first partial to vanish, we must have $x_0 = 1/2$ since\n$1 + y_0$ is nowhere zero, but for $x_0 = 1/2$\nthe second partial cannot vanish.\n\n\\textbf{Remark.}\nThis problem amounts to refuting a potential generalization of the Mean Value Theorem to bivariate\nfunctions. Many counterexamples are possible. Kent Merryfield suggests\n$y \\sin(2 \\pi x)$, for which all four of the boundary integrals vanish;\nhere the partial derivatives are $2\\pi y \\cos (2 \\pi x)$ and $\\sin (2 \\pi x)$.\nCatalin Zara suggests $x^{1/3} y^{2/3}$. Qingchun Ren suggests $xy(1-y)$."
+    }
+  ]
+}

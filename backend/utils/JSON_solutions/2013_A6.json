@@ -1,0 +1,12 @@
+{
+  "year": "2013",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "(by Harm Derksen)\nConsider the generating functions\n\\begin{align*}\nf(x,y) &= \\sum_{(a,b) \\in S} x^a y^b, \\\\\ng(x,y) &= \\sum_{(a,b) \\in \\mathbb{Z}^2} w(a,b) x^a y^b.\n\\end{align*}\nThen $A(S)$ is the constant coefficient of the Laurent polynomial\n$h(x,y) = f(x,y) f(x^{-1}, y^{-1}) g(x,y)$. We may compute this coefficient by averaging over unit circles:\n\\begin{align*}\n(2 \\pi)^2 A(S) &= \\int_0^{2\\pi} \\int_0^{2\\pi} h(e^{is}, e^{it})\\,dt\\,ds \\\\\n&= \\int_0^{2\\pi} \\int_0^{2\\pi} \\left| f(e^{is}, e^{it}) \\right|^2 g(e^{is}, e^{it}) \\,dt\\,ds.\n\\end{align*}\nConsequently, it is enough to check that $g(e^{is}, e^{it})$ is a nonnegative real number for all $s,t \\in \\mathbb{R}$. But\n$g(e^{is}, e^{it}) = 16 G(\\cos s,\\cos t)$ for\n\\[\nG(z,w) = zw + z^2 + w^2 - z^2 w - zw^2 - z^2w^2.\n\\]\nIf $z,w \\in [-1,1]$ and $zw \\geq 0$, then\n\\[\nG(z,w) = zw(1-zw) + z^2(1-w) + w^2(1-z) \\geq 0.\n\\]\nIf $z,w \\in [-1,1]$ and $zw \\leq 0$, then\n\\[\nG(z,w) = (z+w)^2 - zw(1+z)(1+w) \\geq 0.\n\\]\nHence $g(e^{is},e^{it}) \\geq 0$ as desired."
+    }
+  ]
+}

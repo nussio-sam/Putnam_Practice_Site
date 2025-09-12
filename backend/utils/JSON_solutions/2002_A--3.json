@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Note that each of the sets $\\{1\\}, \\{2\\}, \\dots, \\{n\\}$ has the\ndesired property. Moreover, for each set $S$ with integer average $m$\nthat does not contain $m$, $S \\cup \\{m\\}$ also has average $m$,\nwhile for each set $T$ of more than one element with integer average\n$m$ that contains $m$, $T \\setminus \\{m\\}$ also has average $m$.\nThus the subsets other than $\\{1\\}, \\{2\\}, \\dots, \\{n\\}$ can be grouped\nin pairs, so $T_n - n$ is even."
+    }
+  ]
+}

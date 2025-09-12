@@ -1,0 +1,12 @@
+{
+  "year": "2024",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $n=1$. When $n=1$, $(a,b,c) = (1,2,2)$ is a solution to the given equation. We claim that there are no solutions when $n \\geq 2$.\n\nFor $n = 2$, suppose that we have a solution to $2a^2+3b^2=4c^2$ with $a,b,c\\in\\mathbb{N}$. By dividing each of $a,b,c$ by $\\gcd(a,b,c)$, we obtain another solution; thus we can assume that $\\gcd(a,b,c) = 1$. Note that we have $a^2+c^2 \\equiv 0 \\pmod{3}$, and that only $0$ and $1$ are perfect squares mod $3$; thus we must have $a^2 \\equiv c^2 \\equiv 0 \\pmod{3}$. But then $a,c$ are both multiples of $3$; it follows from $b^2 = 12(c/3)^2-6(a/3)^2$ that $b$ is a multiple of $3$ as well, contradicting our assumption that $\\gcd(a,b,c)=1$.\n\nFor $n \\geq 3$, suppose that $2a^n+3b^n=4c^n$. As in the previous case, we can assume $\\gcd(a,b,c)=1$. Since $3b^n=4c^n-2a^n$, $b$ must be even. \nWe can then write $a^n+2^{n-1}\\cdot 3(b/2)^n = 2 c^n$, and so $a$ must be even. Then $2^{n-1}(a/2)^n+2^{n-2} \\cdot 3(b/2)^n = c^n$, and $c$ must be even as well. This contradicts our assumption that $\\gcd(a,b,c)=1$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2016",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Note that the function $e^x - x$ is strictly increasing for $x>0$ (because its derivative is $e^x - 1$, which is positive because $e^x$ is strictly increasing), and its value at 0 is 1.\nBy induction on $n$, we see that $x_n > 0$ for all $n$.\n\nBy exponentiating the equation defining $x_{n+1}$, we obtain the expression\n\\[\nx_n = e^{x_n} - e^{x_{n+1}}.\n\\]\nWe use this equation repeatedly to acquire increasingly precise information about the sequence $\\{x_n\\}$.\n\\begin{itemize}\n\\item\nSince $x_n > 0$, we have $e^{x_n} > e^{x_{n+1}}$, so $x_n > x_{n+1}$.\n\\item\nSince the sequence $\\{x_n\\}$ is decreasing and bounded below by 0, it converges to some limit $L$.\n\\item\nTaking limits in the equation yields $L = e^L - e^L$, whence $L = 0$.\n\\item\nSince $L = 0$, the sequence $\\{e^{x_n}\\}$ converges to 1."
+    }
+  ]
+}

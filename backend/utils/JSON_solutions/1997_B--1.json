@@ -1,0 +1,12 @@
+{
+  "year": "1997",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "It is trivial to check that $\\frac{m}{6n}=\\{\\frac{m}{6n}\\}\\leq\n\\{\\frac{m}{3n}\\}$ for $1\\leq m\\leq 2n$, that\n$1-\\frac{m}{3n}=\\{\\frac{m}{3n}\\}\\leq \\{\\frac{m}{6n}\\}$ for $2n\\leq\nm\\leq 3n$, that $\\frac{m}{3n}-1=\\{\\frac{m}{3n}\\}\\leq \\{\\frac{m}{6n}\\}$\nfor $3n\\leq m\\leq 4n$, and that $1-\\frac{m}{6n}=\\{\\frac{m}{6n}\\}\\leq\n\\{\\frac{m}{3n}\\}$ for $4n\\leq m\\leq 6n$.  Therefore the desired sum is\n\\begin{gather*}\n\\sum_{m=1}^{2n-1} \\frac{m}{6n}\n +\\sum_{m=2n}^{3n-1} \\left(1-\\frac{m}{3n} \\right) \\\\\n +\\sum_{m=3n}^{4n-1} \\left(\\frac{m}{3n}-1 \\right) + \\sum_{m=4n}^{6n-1} \\left(\n1-\\frac{m}{6n} \\right)\n=n.\n\\end{gather*}"
+    }
+  ]
+}

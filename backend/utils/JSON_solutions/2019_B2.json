@@ -1,0 +1,12 @@
+{
+  "year": "2019",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $\\frac{8}{\\pi^3}$.\n\n\\noindent\n\\textbf{Solution 1.}\nBy the double angle and sum-product identities for cosine, we have\n\\begin{align*}\n2\\cos^2\\left(\\frac{(k-1)\\pi}{2n}\\right) - 2\\cos^2 \\left(\\frac{k\\pi}{2n}\\right) &= \\cos\\left(\\frac{(k-1)\\pi}{n}\\right) - \\cos\\left(\\frac{k\\pi}{n}\\right) \\\\\n&= 2\\sin\\left(\\frac{(2k-1)\\pi}{2n}\\right) \\sin\\left(\\frac{\\pi}{2n}\\right),\n\\end{align*}\nand it follows that the summand in $a_n$ can be written as\n\\[\n\\frac{1}{\\sin\\left(\\frac{\\pi}{2n}\\right)} \\left(-\\frac{1}{\\cos^2\\left(\\frac{(k-1)\\pi}{2n}\\right)}+\\frac{1}{\\cos^2\\left(\\frac{k\\pi}{2n}\\right)}\\right).\n\\]\nThus the sum telescopes and we find that\n\\[\na_n = \\frac{1}{\\sin\\left(\\frac{\\pi}{2n}\\right)} \\left(-1+\\frac{1}{\\cos^2\\left(\\frac{(n-1)\\pi}{2n}\\right)}\\right) =\n- \\frac{1}{\\sin\\left(\\frac{\\pi}{2n}\\right)}+ \\frac{1}{\\sin^3\\left(\\frac{\\pi}{2n}\\right)}.\n\\]\nFinally, since $\\lim_{x\\to 0} \\frac{\\sin x}{x} = 1$, we have $\\lim_{n\\to\\infty} \\left( n\\sin\\frac{\\pi}{2n} \\right) = \\frac{\\pi}{2}$, and thus\n$\\lim_{n\\to\\infty} \\frac{a_n}{n^3} = \\frac{8}{\\pi^3}$.\n\n\\noindent\n\\textbf{Solution 2.}\nWe first substitute $n-k$ for $k$ to obtain\n\\[\na_n=\\sum_{k=1}^{n-1} \\frac{\\sin\\left(\\frac{(2k+1)\\pi}{2n}\\right)}{\\sin^2\\left(\\frac{(k+1)\\pi}{2n}\\right)\\sin^2\\left(\\frac{k\\pi}{2n}\\right)}.\n\\]\nWe then use the estimate\n\\[\n\\frac{\\sin x}{x} = 1 + O(x^2) \\qquad (x \\in [0, \\pi])\n\\]\nto rewrite the summand as\n\\[\n\\frac{\\left( \\frac{(2k-1)\\pi}{2n} \\right)}{\\left(\\frac{(k+1)\\pi}{2n}\\right)^2 \\left(\\frac{k\\pi}{2n}\\right)^2} \\left(1 + O\\left( \\frac{k^2}{n^2} \\right) \\right)\n\\]\nwhich simplifies to\n\\[\n\\frac{8 (2k-1) n^3}{k^2 (k+1)^2 \\pi^3} + O\\left( \\frac{n}{k} \\right).\n\\]\nConsequently,\n\\begin{align*}\n\\frac{a_n}{n^3} &= \\sum_{k=1}^{n-1} \\left( \\frac{8 (2k-1)}{k^2 (k+1)^2 \\pi^3} + O\\left( \\frac{1}{kn^2} \\right) \\right) \\\\\n&= \\frac{8}{\\pi^3} \\sum_{k=1}^{n-1} \\frac{(2k-1)}{k^2 (k+1)^2} \n+ O \\left( \\frac{\\log n}{n^2} \\right). \n\\end{align*}\nFinally, note that\n\\[\n\\sum_{k=1}^{n-1} \\frac{(2k-1)}{k^2 (k+1)^2} = \n\\sum_{k=1}^{n-1} \\left( \\frac{1}{k^2} - \\frac{1}{(k+1)^2}\\right) = 1 - \\frac{1}{n^2}\n\\]\nconverges to 1, and so $\\lim_{n \\to \\infty} \\frac{a_n}{n^3} = \\frac{8}{\\pi^3}$."
+    }
+  ]
+}

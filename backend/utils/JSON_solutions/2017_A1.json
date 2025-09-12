@@ -1,0 +1,12 @@
+{
+  "year": "2017",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We claim that the positive integers not in $S$ are $1$ and all multiples of $5$. If $S$ consists of all other natural numbers, then $S$ satisfies the given conditions: note that the only perfect squares not in $S$ are $1$ and numbers of the form $(5k)^2$ for some positive integer $k$, and it readily follows that both (b) and (c) hold.\n\n\nNow suppose that $T$ is another set of positive integers satisfying (a), (b), and (c). Note from (b) and (c) that if $n \\in T$ then $n+5 \\in T$, and so $T$ satisfies the following property: \n\\begin{itemize}"
+    }
+  ]
+}

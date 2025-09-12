@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1996",
+  "question_number": 2,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "By estimating the area under the graph of $\\ln x$ using upper and\nlower rectangles of width 2, we get\n\\begin{align*}\n\\int_1^{2n-1} \\ln x\\,dx &\\leq 2(\\ln(3) + \\cdots + \\ln(2n-1)) \\\\\n&\\leq \\int_3^{2n+1} \\ln x\\,dx.\n\\end{align*}\nSince $\\int \\ln x\\,dx = x \\ln x - x + C$, we have, upon exponentiating\nand taking square roots,\n%\\begin{align*}\n%\\left( \\frac{2n-1}{e} \\right)^{\\frac{2n-1}{2}}\n%< (2n-1)^{\\frac{2n-1}{2}} e^{-n+1}\n%&\\leq 1 \\cdot 3 \\cdots (2n-1) \\\\\n%&\\leq (2n+1)^{\\frac{2n+1}{2}} \\frac{e^{-n+1}}{3^{3/2}}\n%< \\left( \\frac{2n+1}{e} \\right)^{\\frac{2n+1}{2}},\n%\\end{align*}\n\\begin{align*}\n\\left( \\frac{2n-1}{e} \\right)^{\\frac{2n-1}{2}}\n&< (2n-1)^{\\frac{2n-1}{2}} e^{-n+1} \\\\\n& \\leq 1 \\cdot 3 \\cdots (2n-1) \\\\\n& \\leq (2n+1)^{\\frac{2n+1}{2}} \\frac{e^{-n+1}}{3^{3/2}} \\\\\n& < \\left( \\frac{2n+1}{e} \\right)^{\\frac{2n+1}{2}},\n\\end{align*}\nusing the fact that $1 < e < 3$."
+    }
+  ]
+}

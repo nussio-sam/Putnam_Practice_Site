@@ -1,0 +1,12 @@
+{
+  "year": "2020",
+  "question_number": "b)",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "If $j$ is odd, then\n\\[\nf(n) = f(n-q_{j}) + 1.\n\\]"
+    }
+  ]
+}

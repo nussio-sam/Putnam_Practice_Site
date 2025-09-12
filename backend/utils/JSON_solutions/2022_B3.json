@@ -1,0 +1,12 @@
+{
+  "year": "2022",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is yes. Let $R_0,B_0 \\subset \\mathbb{R}^+$ be the set of red and blue numbers at the start of the process, and let $R_n,B_n$ be the set of red and blue numbers after $n$ steps. We claim that $R_2 = \\mathbb{R}^+$.\n\nWe first note that if $y \\in B_1$, then $y/2 \\in R_1$. Namely, the numbers $y$ and $2y$ must be of opposite colors in the original coloring, and then $3y/2$ must be of the same color as one of $y$ or $2y$. \n\nNow suppose by way of contradiction that $x \\in B_2$. Then of the four numbers $x,2x,3x,4x$, every other number must be in $R_1$ and the other two must be in $B_1$. By the previous observation, $2x$ and $4x$ cannot both be in $B_1$; it follows that $2x,4x \\in R_1$ and $x,3x \\in B_1$. By the previous observation again, $x/2$ and $3x/2$ must both be in $R_1$, but then $x = 3x/2-x/2$ is in $R_2$, contradiction. We conclude that $R_2 = \\mathbb{R}^+$, as desired."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2020",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We refer to this two-player game, with $n$ holes and $k$ pegs, as the \\emph{$(n,k)$-game}.\nWe will show that Alice has a winning strategy for the $(n,k)$-game if and only if at least one of $n$ and $k$ is odd; otherwise Bob has a winning strategy.\n\nWe reduce the first claim to the second as follows. If $n$ and $k$ are both odd, then Alice can move the $k$-th peg to the last hole; this renders the last hole, and the peg in it, totally out of play, thus reducing the $(n,k)$-game to the $(n-1,k-1)$-game, for which Alice now has a winning strategy by the second claim. Similarly, if $n$ is odd but $k$ is even, then Alice may move the first peg to the $(k+1)$-st hole, removing the first hole from play and reducing the $(n,k)$-game to the $(n-1,k)$ game. Finally, if $n$ is even but $k$ is odd, then Alice can move the first peg to the last hole, taking the first and last holes, and the peg in the last hole, out of play, and reducing the $(n,k)$-game to the $(n-2,k-1)$-game.\n\nWe now assume $n$ and $k$ are both even and describe a winning strategy for the $(n,k)$-game for Bob.\nSubdivide the $n$ holes into $n/2$ disjoint pairs of adjacent holes. Call a configuration of $k$ pegs \\textit{good} if for each pair of holes, both or neither is occupied by pegs, and note that the starting position is good. Bob can ensure that after each of his moves, he leaves Alice with a good configuration: presented with a good configuration, Alice must move a peg from a pair of occupied holes to a hole in an unoccupied pair; then Bob can move the other peg from the first pair to the remaining hole in the second pair, resulting in another good configuration. In particular, this ensures that Bob always has a move to make. Since the game must terminate, this is a winning strategy for Bob."
+    }
+  ]
+}

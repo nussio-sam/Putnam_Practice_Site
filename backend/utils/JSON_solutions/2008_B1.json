@@ -1,0 +1,12 @@
+{
+  "year": "2008",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "There are at most two such points. For example,\nthe points $(0,0)$ and $(1,0)$ lie on a circle with center\n$(1/2, x)$ for any real number $x$, not necessarily rational.\n\nOn the other hand, suppose $P = (a,b), Q = (c,d), R = (e,f)$\nare three rational points that lie\non a circle. The midpoint $M$ of the side $PQ$ is\n$((a+c)/2, (b+d)/2)$, which is again rational. Moreover, the slope\nof the line $PQ$ is $(d-b)/(c-a)$, so the slope of the line through\n$M$ perpendicular to $PQ$ is $(a-c)/(b-d)$, which is rational or infinite.\n\nSimilarly, if $N$ is the midpoint of $QR$, then $N$ is a rational point\nand the line through $N$ perpendicular to $QR$ has rational slope.\nThe center of the circle lies on both of these lines, so its\ncoordinates $(g,h)$ satisfy two linear equations with rational\ncoefficients, say $Ag + Bh = C$ and $Dg + Eh = F$. Moreover,\nthese equations have a unique solution. That solution must then be\n\\begin{align*}\ng &= (CE - BD)/(AE - BD) \\\\\nh &= (AF - BC)/(AE - BD)\n\\end{align*}\n(by elementary algebra, or Cramer's rule),\nso the center of the circle is rational. This proves the desired result.\n\n\\textbf{Remark:} The above solution is deliberately more verbose\nthan is really necessary. A shorter way to say this is that any two distinct\nrational points determine a \\emph{rational line}\n(a line of the form $ax + by + c = 0$ with $a,b,c$ rational),\nwhile any two nonparallel rational lines intersect at a rational point.\nA similar statement holds with the rational numbers replaced by any\nfield.\n\n\\textbf{Remark:} A more explicit argument is to show that the equation of\nthe circle through the rational points $(x_1, y_1), (x_2, y_2), (x_3, y_3)$ is\n\\[\n0 = \\det \\begin{pmatrix}\nx_1^2 + y_1^2 & x_1 & y_1 & 1 \\\\\nx_2^2 + y_2^2 & x_2 & y_2 & 1 \\\\\nx_3^2 + y_3^2 & x_3 & y_3 & 1 \\\\\nx^2 + y^2 & x & y & 1 \\\\\n\\end{pmatrix}\n\\]\nwhich has the form $a(x^2+y^2) + dx + ey + f = 0$ for $a,d,e,f$ rational.\nThe center of this circle is $(-d/(2a), -e/(2a))$, which is again a rational\npoint."
+    }
+  ]
+}

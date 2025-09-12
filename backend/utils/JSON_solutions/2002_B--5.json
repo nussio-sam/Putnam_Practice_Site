@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "(due to Dan Bernstein)\nPut $N = 2002!$. Then for $d=1, \\dots, 2002$,\nthe number $N^2$ written in base $b = N/d - 1$ has digits\n$d^2, 2d^2, d^2$. (Note that these really are digits because\n$2(2002)^2 < (2002!)^2/2002 - 1$.)\n\nNote: one can also produce an integer $N$ which has base $b$\ndigits $1, *, 1$ for $n$ different values of $b$, as follows.\nChoose $c$ with $0 < c < 2^{1/n}$. For $m$ a large positive integer,\nput $N = 1 + (m+1)\\cdots (m+n)\\lfloor cm \\rfloor^{n-2}$.\nFor $m$ sufficiently large, the bases\n\\[\nb = \\frac{N-1}{(m+i)m^{n-2}} = \\prod_{j \\neq i} (m+j)\n\\]\nfor $i=1, \\dots, n$ will\nhave the properties that $N \\equiv 1 \\pmod{b}$ and $b^2 < N < 2b^2$\nfor $m$ sufficiently large.\n\nNote (due to Russ Mann):\none can also give a ``nonconstructive'' argument. Let $N$ be a\nlarge positive integer. For $b \\in (N^2, N^3)$, the number of 3-digit\nbase-$b$ palindromes in the range $[b^2, N^6 - 1]$ is at least\n\\[\n\\left\\lfloor \\frac{N^6 - b^2}{b} \\right\\rfloor - 1\n\\geq \\frac{N^6}{b^2} - b - 2,\n\\]\nsince there is a palindrome in each interval $[kb, (k+1)b-1]$ for\n$k=b, \\dots, b^2-1$. Thus the average number of bases for which\na number in $[1, N^6-1]$ is at least\n\\[\n\\frac{1}{N^6} \\sum_{b=N^2+1}^{N^3-1} \\left( \\frac{N^6}{b} - b-2 \\right)\n\\geq  \\log(N) - c\n\\]\nfor some constant $c>0$. Take $N$ so that the right side exceeds $2002$;\nthen at least one number in $[1, N^6-1]$ is a base-$b$ palindrome\nfor at least 2002 values of $b$."
+    }
+  ]
+}

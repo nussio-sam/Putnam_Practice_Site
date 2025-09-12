@@ -1,0 +1,12 @@
+{
+  "year": "2019",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $\\frac{p-1}{2}$. \nDefine the operator $D = x \\frac{d}{dx}$, where $\\frac{d}{dx}$ indicates formal differentiation of polynomials.\nFor $n$ as in the problem statement, we have $q(x) = (x-1)^n r(x)$ for some polynomial $r(x)$ in $\\mathbb{F}_p$ not divisible by $x-1$. For $m=0,\\dots,n$, by the product rule we have\n\\[\n(D^m q)(x) \\equiv n^m x^m (x-1)^{n-m} r(x) \\pmod{(x-1)^{n-m+1}}.\n\\]\nSince $r(1) \\neq 0$ and $n \\not\\equiv 0 \\pmod{p}$ (because $n \\leq \\deg(q) = p-1$), we may identify $n$ as the smallest nonnegative integer for which $(D^n q)(1) \\neq 0$.\n\nNow note that $q = D^{(p-1)/2} s$ for\n\\[\ns(x) = 1 + x + \\cdots + x^{p-1} = \\frac{x^p-1}{x-1} = (x-1)^{p-1}\n\\]\nsince $(x-1)^p = x^p-1$ in $\\mathbb{F}_p[x]$.\nBy the same logic as above, $(D^n s)(1) = 0$ for $n=0,\\dots,p-2$ but not for $n=p-1$.\nThis implies the claimed result.\n\n\\noindent\n\\textbf{Remark.}\nOne may also finish by checking directly that \nfor any positive integer $m$,\n\\[\n\\sum_{k=1}^{p-1} k^m \\equiv \\begin{cases} -1 \\pmod{p} & \\mbox{if $(p-1)|m$} \\\\\n0 \\pmod{p} & \\mbox{otherwise.}\n\\end{cases}\n\\]\nIf $(p-1) | m$, then $k^m \\equiv 1 \\pmod{p}$ by the little Fermat theorem, and so the sum is congruent\nto $p-1 \\equiv -1 \\pmod{p}$. Otherwise, for any primitive root $\\ell$ mod $p$, multiplying the sum by $\\ell^m$ permutes the terms modulo $p$ and hence does not change the sum modulo $p$; since $\\ell^n \\not\\equiv 1 \\pmod{p}$, this is only possible if the sum is zero modulo $p$."
+    }
+  ]
+}

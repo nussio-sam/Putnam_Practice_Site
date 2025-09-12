@@ -1,0 +1,12 @@
+{
+  "year": "2011",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Since the rational numbers are dense in the reals, we can find positive integers $a,b$\nsuch that\n\\[\n\\frac{3\\epsilon}{hk} < \\frac{b}{a}\n< \\frac{4\\epsilon}{hk}.\n\\]\nBy multiplying $a$ and $b$ by a suitably large positive integer, we can also ensure that $3a^2 > b$. We then have\n\\[\n\\frac{\\epsilon}{hk} < \\frac{b}{3a} < \\frac{b}{\\sqrt{a^2+b} + a} = \\sqrt{a^2+b} - a\n\\]\nand\n\\[\n\\sqrt{a^2+b} - a = \\frac{b}{\\sqrt{a^2+b} + a} \\leq \\frac{b}{2a} < 2 \\frac{\\epsilon}{hk}.\n\\]\nWe may then take $m = k^2 (a^2+b), n = h^2 a^2$."
+    }
+  ]
+}

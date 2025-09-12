@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Every positive rational number can be uniquely written in lowest terms\nas $a/b$ for $a,b$ positive integers. We prove the statement in the\nproblem by induction on the largest prime dividing either $a$ or $b$\n(where this is considered to be $1$ if $a=b=1$). For the base case, we\ncan write $1/1 = 2!/2!$. For a general $a/b$, let $p$ be the largest\nprime dividing either $a$ or $b$; then $a/b = p^k a'/b'$ for some $k\\neq\n0$ and positive integers $a',b'$ whose largest prime factors are\nstrictly less than $p$. We now have $a/b = (p!)^k \\frac{a'}{(p-1)!^k b'}$,\nand all prime factors of $a'$ and $(p-1)!^k b'$ are strictly less than $p$.\nBy the induction assumption, $\\frac{a'}{(p-1)!^k b'}$ can be written as a\nquotient of products of prime factorials, and so $a/b = (p!)^k\n\\frac{a'}{(p-1)!^k b'}$ can as well. This completes the induction.\n\n\\textbf{Remark.} Noam Elkies points out that the representations are unique\nup to rearranging and canceling common factors."
+    }
+  ]
+}

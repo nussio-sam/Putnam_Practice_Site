@@ -1,0 +1,12 @@
+{
+  "year": "2003",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "\\textbf{First solution:}\nIt is enough to show that for each prime $p$, the exponent of $p$ in\nthe prime factorization of both sides is the same.\nOn the left side, it is well-known that the exponent of $p$ in the\nprime factorization of $n!$ is\n\\[\n\\sum_{i =1}^n \\left\\lfloor \\frac{n}{p^i} \\right\\rfloor.\n\\]\n(To see this, note that the $i$-th term counts the multiples of $p^i$ among\n$1, \\dots, n$, so that a number divisible exactly by $p^i$ gets counted\nexactly $i$ times.)  This number can be reinterpreted as the cardinality\nof the set $S$ of points in the plane with positive integer coordinates\nlying on or under the curve $y = np^{-x}$: namely, each summand is the\nnumber of points of $S$ with $x=i$.\n\nOn the right side, the exponent of $p$ in the prime factorization of $\\lcm(1,\n\\dots, \\lfloor n/i \\rfloor)$ is $\\lfloor \\log_p \\lfloor n/i \\rfloor \\rfloor\n= \\lfloor \\log_p (n/i) \\rfloor$.  However, this is precisely the number\nof points of $S$ with $y=i$. Thus\n\\[\n\\sum_{i=1}^n\n\\lfloor \\log_p \\lfloor n/i \\rfloor \\rfloor\n= \\sum_{i =1}^n \\left\\lfloor \\frac{n}{p^i} \\right\\rfloor,\n\\]\nand the desired result follows.\n\n\\textbf{Second solution:}\nWe prove the result by induction on $n$, the case $n=1$ being obvious.\nWhat we actually show is that going from $n-1$ to $n$ changes both\nsides by the same multiplicative factor, that is,\n\\[\nn = \\prod_{i=1}^{n-1} \\frac{\\lcm\\{1, 2, \\dots, \\lfloor n/i \\rfloor\\}}{\\lcm\n\\{1, 2, \\dots, \\lfloor (n-1)/i \\rfloor\\}}.\n\\]\nNote that the $i$-th term in the product is equal to 1 if $n/i$ is not\nan integer, i.e., if $n/i$ is not a divisor of $n$.\nIt is also equal to 1 if $n/i$ is a divisor of $n$ but not a prime power,\nsince any composite number divides the lcm of all smaller numbers.\nHowever, if $n/i$ is a power of $p$, then the $i$-th term is equal to $p$.\n\nSince $n/i$ runs over all proper divisors of $n$, the product on the right\nside includes one factor of the prime $p$\nfor each factor of $p$ in the prime factorization of $n$. Thus the whole\nproduct is indeed equal to $n$, completing the induction."
+    }
+  ]
+}

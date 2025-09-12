@@ -1,0 +1,12 @@
+{
+  "year": "2011",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Number the games $1,\\ldots,2011$, and let $A = (a_{jk})$ be the $2011 \\times 2011$ matrix whose $jk$ entry is $1$ if player $k$ wins game $j$ and $i = \\sqrt{-1}$ if player $k$ loses game $j$. Then $\\overline{a_{hj}}a_{jk}$ is $1$ if players $h$ and $k$ tie in game $j$; $i$ if player $h$ wins and player $k$ loses in game $j$; and $-i$ if $h$ loses and $k$ wins. It follows that $T + i W = \\overline{A}^T A$.\n\nNow the determinant of $A$ is unchanged if we subtract the first row of $A$ from each of the other rows, producing a matrix whose rows, besides the first one, are $(1-i)$ times a row of integers. Thus we can write $\\det A = (1-i)^{2010}(a+bi)$ for some integers $a,b$. But then\n$\\det(T+iW) = \\det(\\overline{A}^T A) = 2^{2010}(a^2+b^2)$ is a nonnegative integer multiple of $2^{2010}$, as desired."
+    }
+  ]
+}

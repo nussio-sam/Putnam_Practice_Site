@@ -1,0 +1,12 @@
+{
+  "year": "1996",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "View $x_1, \\dots, x_n$ as an arrangement of the numbers $1, 2, \\dots,\nn$ on a circle.\nWe prove that the optimal arrangement is\n\\[\n\\dots, n-4, n-2, n, n-1, n-3, \\dots\n\\]\nTo show this, note that if\n$a, b$ is a pair of adjacent numbers and $c,d$ is another pair (read\nin the same order around the circle) with $a < d$ and $b > c$, then\nthe segment from $b$ to $c$ can be reversed, increasing the sum by\n\\[\nac + bd - ab - cd = (d-a)(b-c) > 0.\n\\]\nNow relabel the numbers so they appear in order as follows:\n\\[\n\\dots, a_{n-4}, a_{n-2}, a_n = n, a_{n-1}, a_{n-3}, \\dots\n\\]\nwhere without loss of generality we assume $a_{n-1} > a_{n-2}$. By\nconsidering the pairs $a_{n-2}, a_n$ and $a_{n-1}, a_{n-3}$ and using\nthe trivial fact $a_n > a_{n-1}$, we deduce $a_{n-2} > a_{n-3}$. We\nthen compare the pairs $a_{n-4}, a_{n-2}$ and $a_{n-1}, a_{n-3}$, and\nusing that $a_{n-1} > a_{n-2}$, we deduce $a_{n-3} > a_{n-4}$.\nContinuing in this\nfashion, we prove that $a_n > a_{n-1} > \\dots > a_1$ and\nso $a_k = k$ for $k = 1, 2, \\dots, n$, i.e.\\ that the optimal\narrangement is as claimed. In particular, the maximum value of the sum\nis\n\\begin{multline*}\n1 \\cdot 2 + (n-1)\\cdot n + 1 \\cdot 3 + 2 \\cdot 4 + \\cdots + (n-2)\\cdot n \\\\\n\\begin{aligned}\n&= 2 + n^2 - n + (1^2 - 1) + \\cdots + [(n-1)^2 - 1] \\\\\n&= n^2 - n + 2 - (n-1) + \\frac{(n-1)n(2n-1)}{6} \\\\\n&= \\frac{2n^3 + 3n^2 - 11n + 18}{6}.\n\\end{aligned}\n\\end{multline*}\n\nAlternate solution: We prove by induction that the value given above\nis an upper bound; it is clearly a lower bound because of the\narrangement given above. Assume this is the case for $n-1$. The optimal\narrangement for $n$ is obtained from some arrangement for $n-1$ by\ninserting $n$ between some pair $x, y$ of adjacent terms. This\noperation increases the sum by $nx + ny - xy = n^2 - (n-x)(n-y)$,\nwhich is an increasing function of both $x$ and $y$. In particular,\nthis difference is maximal when $x$ and $y$ equal $n-1$ and $n-2$.\nFortunately, this yields precisely the difference between the claimed\nupper bound for $n$ and the assumed upper bound for $n-1$, completing\nthe induction."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "It is possible if and only if $n \\geq 1005$.\nSince\n\\[\n1 + \\cdots + 2009 = \\frac{2009 \\times 2010}{2} = 2010 \\times 1004.5,\n\\]\nfor $n \\leq 1004$, we can start with an initial distribution in which each box\n$B_i$ starts with at most $i-1$ balls (so in particular $B_1$ is empty).\nFrom such a distribution, no moves are possible, so\nwe cannot reach the desired final distribution.\n\nSuppose now that $n \\geq 1005$.\nBy the pigeonhole principle, at any time, there exists at least one index $i$ for which the box $B_i$\ncontains at least $i$ balls. We will describe any such index as being \\emph{eligible}.\nThe following sequence of operations then has the desired effect.\n\\begin{itemize}"
+    }
+  ]
+}

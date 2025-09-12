@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The only such functions are those of the form $f(x) = cx+d$ for some real numbers $c,d$ (for which the\nproperty is obviously satisfied). To see this, suppose that $f$ has the desired property. Then for any $x \\in \\RR$,\n\\begin{align*}\n2f'(x) &= f(x+2)-f(x) \\\\\n&= (f(x+2) - f(x+1)) + (f(x+1) - f(x)) \\\\\n&= f'(x+1) + f'(x).\n\\end{align*}\nConsequently, $f'(x+1) = f'(x)$.\n\nDefine the function $g: \\RR \\to \\RR$ by $g(x) = f(x+1) - f(x)$, and put $c = g(0)$, $d = f(0)$. For all $x \\in \\RR$,\n$g'(x) = f'(x+1) -f'(x) = 0$, so $g(x) = c$ identically,\nand $f'(x) = f(x+1)-f(x) = g(x) = c$, so $f(x) = cx+d$ identically as desired."
+    }
+  ]
+}

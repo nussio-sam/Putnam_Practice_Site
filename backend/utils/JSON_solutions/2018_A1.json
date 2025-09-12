@@ -1,0 +1,12 @@
+{
+  "year": "2018",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "By clearing denominators and regrouping, we see that the given equation is equivalent to \n\\[\n(3a-2018)(3b-2018) = 2018^2.\n\\]\nEach of the factors is congruent to $1 \\pmod 3$. There are $6$ positive factors of $2018^2 = 2^2 \\cdot 1009^2$ that are congruent to $1 \\pmod 3$: $1$, $2^2$, $1009$, $2^2 \\cdot 1009$, $1009^2$, $2^2 \\cdot 1009^2$. These lead to the $6$ possible pairs: $(a,b) = (673,1358114)$, $(674,340033)$, $(1009,2018)$, $(2018,1009)$, $(340033,674)$, and $(1358114,673)$.\n\nAs for negative factors, the ones that are congruent to $1 \\pmod 3$ are $-2, -2 \\cdot 1009, -2 \\cdot 1009^2$.\nHowever, all of these lead to pairs where $a \\leq 0$ or $b \\leq 0$."
+    }
+  ]
+}

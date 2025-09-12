@@ -1,0 +1,12 @@
+{
+  "year": "2019",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Such a set exists for every $n$. To construct an example, define the function $f: \\mathbb{Z}^n \\to \\mathbb{Z}/(2n+1) \\mathbb{Z}$ by\n\\[\nf(x_1,\\dots,x_n) = x_1 + 2x_2 + \\cdots + nx_n \\pmod{2n+1},\n\\]\nthen let $S$ be the preimage of 0.\n\nTo check condition (1), note that if $p \\in S$ and $q$ is a neighbor of $p$ differing only in coordinate $i$, then\n\\[\nf(q) = f(p) \\pm i \\equiv \\pm i \\pmod{2n+1}\n\\]\nand so $q \\notin S$.\n\nTo check condition (2), note that if $p \\in \\mathbb{Z}^n$ is not in $S$, then there exists a unique choice of $i \\in \\{1,\\dots,n\\}$ such that $f(p)$ is congruent to one of $+i$ or $-i$ modulo $2n+1$. The unique neighbor $q$ of $p$ in $S$ is then obtained by either subtracting $1$ from, or adding $1$ to, the $i$-th coordinate of $p$.\n\n\\noindent\n\\textbf{Remark.}\nAccording to Art of Problem Solving (thread c6h366290), this problem was a 1985 IMO submission from Czechoslovakia. For an application to steganography, see:\nJ. Fridrich and P. Lison\\v{e}k, Grid colorings in steganography,\n\\textit{IEEE Transactions on Information Theory} \\textbf{53} (2007), 1547--1549."
+    }
+  ]
+}

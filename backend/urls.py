@@ -29,5 +29,8 @@ router.register(r'solutions', views.SolutionViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('qa/answer/', views.QAView.as_view(), name = 'question-answer'),
+    path('qa/history/', views.QAHistoryView.as_view(), name = 'qa-history'),
+    path('qa/health/', views.health_check, name='qa-health-check'),
 ]

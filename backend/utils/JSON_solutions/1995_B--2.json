@@ -1,0 +1,12 @@
+{
+  "year": "1995",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "For those who haven't taken enough physics, ``rolling without\nslipping'' means that the perimeter of the ellipse and the curve pass\nat the same rate, so all we're saying is that the perimeter of the\nellipse equals the length of one period of the sine curve. So set up\nthe integrals:\n\\begin{multline*}\n\\int_{0}^{2\\pi} \\sqrt{(-a \\sin \\theta)^{2} + (b \\cos \\theta)^{2}}\\,\nd\\theta\\\\\n = \\int_{0}^{2\\pi a} \\sqrt{1 + (c/a \\cos x/a)^{2}}\\,dx.\n\\end{multline*}\nLet $\\theta = x/a$ in the second integral and write 1 as $\\sin^{2}\n\\theta + \\cos^{2} \\theta$ and you get\n\\begin{multline*}\n\\int_{0}^{2\\pi} \\sqrt{a^{2} \\sin^{2} \\theta + b^{2} \\cos^{2}\n\\theta}\\,d\\theta\\\\\n = \\int_{0}^{2\\pi} \\sqrt{a^{2} \\sin^{2} \\theta +\n(a^{2} + c^{2}) \\cos^{2} \\theta}\\,d\\theta.\n\\end{multline*}\nSince the left side is increasing as a function of $b$, we have\nequality if and only if $b^{2} = a^{2} + c^{2}$."
+    }
+  ]
+}

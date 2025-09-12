@@ -1,0 +1,12 @@
+{
+  "year": "2013",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Note that \n\\begin{align*}\nc(2k+1)c(2k+3) &= (-1)^k c(k) (-1)^{k+1} c(k+1) \\\\\n&= -c(k)c(k+1) \\\\ \n&= -c(2k)c(2k+2).\n\\end{align*}\nIt follows that $\\sum_{n=2}^{2013} c(n)c(n+2) = \\sum_{k=1}^{1006} (c(2k)c(2k+2)+c(2k+1)c(2k+3)) = 0$,\nand so the desired sum is $c(1)c(3) = -1$. \n\n\\textbf{Remark}: Karl Mahlburg points out the general formula\n$c(n) = (-1)^{b_0 b_1 + b_1 b_2 + \\dots + b_{k-1} b_k}$\nfor $n$ having binary representation $b_k \\cdots b_0$."
+    }
+  ]
+}

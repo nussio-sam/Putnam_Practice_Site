@@ -1,0 +1,12 @@
+{
+  "year": "1997",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We show more precisely that the game terminates with one player\nholding all of the pennies if and only if $n = 2^m + 1$ or $n = 2^m +\n2$ for some $m$. First suppose we are in the following situation for\nsome $k \\geq 2$. (Note: for us, a ``move'' consists of two turns,\nstarting with a one-penny pass.)\n\\begin{itemize}\n\\item\nExcept for the player to move, each player has $k$ pennies;\n\\item\nThe player to move has at least $k$ pennies."
+    }
+  ]
+}

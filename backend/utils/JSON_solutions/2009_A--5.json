@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "No, there is no such group.\nBy the structure theorem for finitely generated abelian groups,\n$G$ can be written as a product of cyclic groups.\nIf any of these factors has odd order, then $G$ has an element of odd order,\nso the product of the orders of all of its elements cannot be a power of 2.\n\nWe may thus consider only abelian $2$-groups hereafter.\nFor such a group $G$, the product of the orders of all of its elements\nhas the form $2^{k(G)}$ for some nonnegative integer $G$, and we must show\nthat it is impossible to achieve $k(G) = 2009$.\nAgain by the structure theorem, we may write\n\\[\nG \\cong \\prod_{i=1}^\\infty (\\ZZ/2^i \\ZZ)^{e_i}\n\\]\nfor some nonnegative integers $e_1,e_2,\\dots$, all but finitely many of\nwhich are $0$.\n\nFor any nonnegative integer $m$, the elements of $G$ of order at most $2^m$\nform a subgroup isomorphic to\n\\[\n\\prod_{i=1}^\\infty (\\ZZ/2^{\\min\\{i,m\\}} \\ZZ)^{e_i},\n\\]\nwhich has $2^{s_m}$ elements for $s_m = \\sum_{i=1}^\\infty \\min\\{i,m\\} e_i$.\nHence\n\\[\nk(G) = \\sum_{i=1}^\\infty i(2^{s_i} - 2^{s_{i-1}}).\n\\]\nSince $s_1 \\leq s_2 \\leq \\cdots$, $k(G)+1$ is always divisible by $2^{s_1}$.\nIn particular, $k(G) = 2009$ forces $s_1 \\leq 1$.\n\nHowever, the only cases where $s_1 \\leq 1$ are where all of the $e_i$ are $0$,\nin which case $k(G) = 0$, or where $e_i = 1$ for some $i$ and $e_j = 0$\nfor $j \\neq i$, in which case $k(G) = (i-1)2^i + 1$.\nThe right side is a strictly increasing function\nof $i$ which equals $1793$ for $i=8$ and $4097$ for $i=9$, so it can never equal\n2009. This proves the claim.\n\n\\textbf{Remark.} One can also arrive at the key congruence by dividing $G$\ninto equivalence classes, by declaring two elements to be equivalent if they generate the\nsame cyclic subgroup of $G$.\nFor $h>0$, an element of order $2^h$ belongs to an equivalence class of size $2^{h-1}$,\nso the products of the orders of the elements of this equivalence class is $2^j$\nfor $j = h 2^{h-1}$. This quantity is divisible by 4 as long as $h > 1$;\nthus to have $k(G) \\equiv 1 \\pmod{4}$, the number of elements of $G$ of order 2 must be\ncongruent to 1 modulo 4. However, there are exactly $2^e-1$ such elements,\nfor $e$ the number of cyclic factors of $G$. Hence $e = 1$, and one concludes as in the\ngiven solution."
+    }
+  ]
+}

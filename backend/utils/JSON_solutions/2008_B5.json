@@ -1,0 +1,12 @@
+{
+  "year": "2008",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The functions $f(x) = x+n$ and $f(x)=-x+n$ for any integer $n$ clearly satisfy the condition of the problem; we claim that these are the only possible $f$.\n\nLet $q=a/b$ be any rational number with $\\gcd(a,b)=1$ and $b>0$. For $n$ any positive integer, we have\n\\[\n\\frac{f(\\frac{an+1}{bn}) - f(\\frac{a}{b})}{\\frac{1}{bn}}\n= bn f\\left(\\frac{an+1}{bn}\\right) - nb f\\left(\\frac{a}{b}\\right)\n\\]\nis an integer by the property of $f$. Since $f$ is differentiable at $a/b$, the left hand side has a limit. It follows that for sufficiently large $n$, both sides must be equal to some integer $c=f'(\\frac{a}{b})$: $f(\\frac{an+1}{bn}) = f(\\frac{a}{b})+\\frac{c}{bn}$. Now $c$ cannot be $0$, since otherwise $f(\\frac{an+1}{bn}) = f(\\frac{a}{b})$ for sufficiently large $n$ has denominator $b$ rather than $bn$. Similarly, $|c|$ cannot be greater than $1$: otherwise\nif we take $n=k|c|$ for $k$ a sufficiently large positive integer,\nthen $f(\\frac{a}{b})+\\frac{c}{bn}$ has denominator $bk$, contradicting the fact that $f(\\frac{an+1}{bn})$ has denominator $bn$. It follows that $c = f'(\\frac{a}{b}) = \\pm 1$.\n\nThus the derivative of $f$ at any rational number is $\\pm 1$. Since $f$ is continuously differentiable, we conclude that $f'(x) = 1$ for all real $x$ or $f'(x) = -1$ for all real $x$. Since $f(0)$ must be an integer (a rational number with denominator $1$), $f(x)=x+n$ or $f(x)=-x+n$ for some integer $n$.\n\n\\textbf{Remark:}\nAfter showing that $f'(q)$ is an integer for each $q$, one can instead\nargue that $f'$ is a continuous function from the rationals to the integers,\nso must be constant. One can then write $f(x) = ax+b$ and check that\n$b \\in \\ZZ$ by evaluation at $a=0$, and that $a= \\pm 1$ by evaluation at\n$x=1/a$."
+    }
+  ]
+}

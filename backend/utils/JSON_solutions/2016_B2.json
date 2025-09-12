@@ -1,0 +1,12 @@
+{
+  "year": "2016",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "We prove that the limit exists for $\\alpha = \\frac{3}{4}$, $\\beta =\\frac{4}{3}$. \n\nFor any given positive integer $n$, the integers which are closer to $n^2$ than to any other perfect square are the ones in the interval $[n^2 - n - 1, n^2 + n]$. The number of squarish numbers in this interval is $1 + \\lfloor \\sqrt{n-1} \\rfloor + \\lfloor \\sqrt{n} \\rfloor$.\nRoughly speaking, this means that \n\\[\nS(N) \\sim \\int_0^{\\sqrt{N}} 2 \\sqrt{x} \\,dx = \\frac{4}{3} N^{3/4}.\n\\]\nTo make this precise, we use the bounds $x-1 \\leq \\lfloor x \\rfloor \\leq x$,\nand the upper and lower Riemann sum estimates for the integral of $\\sqrt{x}$,\nto derive upper and lower bounds on $S(N)$:\n\\begin{align*}\nS(N) &\\geq \\sum_{n=1}^{\\lfloor \\sqrt{N} \\rfloor - 1} \n(2 \\sqrt{n-1}-1) \\\\\n&\\geq \\int_0^{\\lfloor \\sqrt{N} \\rfloor - 2} 2\\sqrt{x} \\,dx - \\sqrt{N} \\\\\n&\\geq \\frac{4}{3} (\\sqrt{N} - 3)^{3/2} - \\sqrt{N}\n\\end{align*}\n\n\\begin{align*}\nS(N) &\\leq \\sum_{n=1}^{\\lceil \\sqrt{N} \\rceil} (2 \\sqrt{n} + 1) \\\\\n&\\leq \\int_0^{\\lceil \\sqrt{N}\\rceil + 1} 2 \\sqrt{x}\\,dx  + \\sqrt{N} + 1\\\\\n&\\leq \\frac{4}{3} (\\sqrt{N} + 2)^{3/2} + \\sqrt{N} + 1.\n\\end{align*}\n\n\\noindent\n\\textbf{Remark:}\nJohn Rickert points out that when $N = n^4$, one can turn the previous estimates into exact calculations to obtain the formula\n\\[\nS(N) = \\frac{4}{3}\\left( n^3 + \\frac{n}{2} \\right) = \\frac{4}{3} N^{3/4} + \\frac{2}{3} N^{1/4}.\n\\]\nFor general $N$, one can then use the estimates\n\\begin{align*}\n\\frac{4}{3} (N-1)^{3/4} + \\frac{2}{3} (N-1)^{1/4}\n&\\leq\nS(\\lfloor N^{1/4} \\rfloor^4) \\\\\n&\\leq S(N) \\\\\n&\\leq S(\\lceil N^{1/4} \\rceil^4) \\\\\n&\\leq \\frac{4}{3} (N+1)^{3/4} + \\frac{2}{3} (N+1)^{1/4}\n\\end{align*}\nto obtain the desired limit."
+    }
+  ]
+}

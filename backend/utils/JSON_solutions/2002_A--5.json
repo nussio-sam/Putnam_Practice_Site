@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "It suffices to prove that for any relatively prime positive integers\n$r,s$, there exists an integer $n$ with $a_n = r$ and $a_{n+1} = s$.\nWe prove this by induction on $r+s$, the case $r+s=2$ following\nfrom the fact that $a_0=a_1 = 1$. Given $r$ and $s$ not both 1 with\n$\\gcd(r,s) = 1$, we must have $r \\neq s$. If $r>s$, then by\nthe induction hypothesis we have $a_n = r-s$ and $a_{n+1} = s$ for\nsome $n$; then $a_{2n+2} = r$ and $a_{2n+3} = s$. If $r< s$,\nthen we have $a_n = r$ and $a_{n+1} = s-r$ for some $n$; then\n$a_{2n+1} = r$ and $a_{2n+2} = s$.\n\nNote: a related problem is as follows. Starting with the sequence\n\\[\n\\frac{0}{1}, \\frac{1}{0},\n\\]\nrepeat the following operation: insert between each pair\n$\\frac{a}{b}$ and $\\frac{c}{d}$ the pair $\\frac{a+c}{b+d}$.\nProve that each positive rational number eventually appears.\n\nObserve that by induction, if $\\frac{a}{b}$ and $\\frac{c}{d}$\nare consecutive terms in the sequence, then $bc - ad = 1$. The\nsame holds for consecutive terms of the $n$-th \\emph{Farey sequence}, the\nsequence of rational numbers in $[0,1]$ with denominator\n(in lowest terms) at most $n$."
+    }
+  ]
+}

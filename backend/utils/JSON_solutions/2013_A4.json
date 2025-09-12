@@ -1,0 +1,12 @@
+{
+  "year": "2013",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Let $w_1',\\ldots,w_k'$ be arcs such that: $w_j'$ has the same length as $w_j$; $w_1'$ is the same as $w_1$; and $w_{j+1}'$ is adjacent to $w_j'$ (i.e., the last digit of $w_j'$ comes right before the first digit of $w_{j+1}'$). Since $w_j$ has length $Z(w_j)+N(w_j)$, the sum of the lengths of $w_1,\\ldots,w_k$ is $k(Z+N)$, and so the concatenation of $w_1',\\ldots,w_k'$ is a string of $k(Z+N)$ consecutive digits around the circle. (This string may wrap around the circle, in which case some of these digits may appear more than once in the string.) Break this string into $k$ arcs $w_1'',\\ldots,w_k''$ each of length $Z+N$, each adjacent to the previous one. (Note that if the number of digits around the circle is $m$, then $Z+N \\leq m$ since $Z(w_j)+N(w_j) \\leq m$ for all $j$, and thus each of $w_1'',\\ldots,w_k''$ is indeed an arc.)\n\nWe claim that for some $j=1,\\ldots,k$, $Z(w_j'')=Z$ and $N(w_j'')=N$ (where the second equation follows from the first since $Z(w_j'')+N(w_j'')=Z+N$). Otherwise, since all of the $Z(w_j'')$ differ by at most $1$, either $Z(w_j'') \\leq Z-1$ for all $j$ or $Z(w_j'') \\geq Z+1$ for all $j$. In either case,\n$|kZ - \\sum_j Z(w_j')| = |kZ-\\sum_j Z(w_j'')| \\geq k$. But since $w_1=w_1'$, we have\n$|kZ - \\sum_j Z(w_j')| = |\\sum_{j=1}^k (Z(w_j)-Z(w_j'))| = |\\sum_{j=2}^k (Z(w_j)-Z(w_j'))| \\leq \\sum_{j=2}^k |Z(w_j)-Z(w_j')| \\leq k-1$, contradiction."
+    }
+  ]
+}

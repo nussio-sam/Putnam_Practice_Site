@@ -1,0 +1,12 @@
+{
+  "year": "2016",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The given functional equation, along with the same equation but with $x$ replaced by $\\frac{x-1}{x}$ and $\\frac{1}{1-x}$ respectively, yields:\n\\begin{align*}\nf(x) + f\\left(1-\\frac{1}{x}\\right) &= \\tan^{-1}(x) \\\\\nf\\left(\\frac{x-1}{x}\\right) + f\\left(\\frac{1}{1-x}\\right) &= \\tan^{-1}\\left(\\frac{x-1}{x}\\right) \\\\\nf\\left(\\frac{1}{1-x}\\right) + f(x) &= \\tan^{-1}\\left(\\frac{1}{1-x}\\right).\n\\end{align*}\nAdding the first and third equations and subtracting the second gives:\n\\[\n2f(x) = \\tan^{-1}(x) + \\tan^{-1}\\left(\\frac{1}{1-x}\\right) - \\tan^{-1}\\left(\\frac{x-1}{x}\\right).\n\\]\nNow $\\tan^{-1}(t) + \\tan^{-1}(1/t)$ is equal to $\\pi/2$ if $t>0$ and $-\\pi/2$ if $t<0$; it follows that for $x \\in (0,1)$,\n\\begin{align*}\n2(f(x)+f(1-x)) &= \\left(\\tan^{-1}(x)+\\tan^{-1}(1/x)\\right)\\\\\n&\\,\\, + \\left(\\tan^{-1}(1-x)+\\tan^{-1}\\left(\\frac{1}{1-x}\\right)\\right) \\\\\n&\\,\\,- \n\\left(\\tan^{-1}\\left(\\frac{x-1}{x}\\right) + \\tan^{-1}\\left(\\frac{x}{x-1}\\right) \\right) \\\\\n&= \\frac{\\pi}{2} + \\frac{\\pi}{2} + \\frac{\\pi}{2} \\\\\n&= \\frac{3\\pi}{2}.\n\\end{align*}\nThus\n\\[\n4\\int_0^1 f(x)\\,dx = 2\\int_0^1 (f(x)+f(1-x))dx = \\frac{3\\pi}{2}\n\\]\nand finally $\\int_0^1 f(x)\\,dx = \\frac{3\\pi}{8}$.\n\n\\noindent\n\\textbf{Remark:}\nOnce one has the formula for $f(x)$, one can also (with some effort) directly evaluate the integral of each summand over $[0,1]$ to obtain the same result. A much cleaner variant of this approach (suggested on AoPS, user \\texttt{henrikjb}) is to write\n\\[\n\\tan^{-1}(x) = \\int_0^y \\frac{1}{1+y^2}\\,dy\n\\]\nand do a change of variable on the resulting double integral."
+    }
+  ]
+}

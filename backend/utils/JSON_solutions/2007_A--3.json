@@ -1,0 +1,12 @@
+{
+  "year": "2007",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Assume that we have an ordering of $1,2,\\dots,3k+1$ such\n  that no initial subsequence sums to $0$ mod $3$. If we omit the\n  multiples of $3$ from this ordering, then the remaining sequence mod\n  $3$ must look like $1,1,-1,1,-1,\\ldots$ or $-1,-1,1,-1,1,\\ldots$.\n  Since there is one more integer in the ordering congruent to $1$ mod\n  $3$ than to $-1$, the sequence mod $3$ must look like\n  $1,1,-1,1,-1,\\ldots$.\n\n  It follows that the ordering satisfies the given condition if and\n  only if the following two conditions hold: the first element in the\n  ordering is not divisible by $3$, and the sequence mod $3$ (ignoring\nzeroes) is of the form $1,1,-1,1,-1,\\ldots$. The two conditions are\n  independent, and the probability of the first is $(2k+1)/(3k+1)$\nwhile the probability of the second is\n$1/\\binom{2k+1}{k}$,\n  since there are $\\binom{2k+1}{k}$ ways to order $(k+1)$ $1$'s and $k$\n  $-1$'s.\n  Hence the desired probability is the product of these two, or\n  $\\frac{k!(k+1)!}{(3k+1)(2k)!}$."
+    }
+  ]
+}

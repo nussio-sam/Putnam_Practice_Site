@@ -1,0 +1,12 @@
+{
+  "year": "2008",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The sum diverges. From the definition, $f(x) = x$ on $[1,e]$, $x\\ln x$ on $(e,e^e]$, $x\\ln x\\ln\\ln x$ on $(e^e,e^{e^e}]$, and so forth. It follows that on $[1,\\infty)$, $f$ is positive, continuous, and increasing. Thus $\\sum_{n=1}^\\infty \\frac{1}{f(n)}$, if it converges, is bounded below by $\\int_1^{\\infty} \\frac{dx}{f(x)}$; it suffices to prove that the integral diverges.\n\nWrite $\\ln^1 x  = \\ln x $ and $\\ln^k x = \\ln(\\ln^{k-1} x)$ for $k \\geq 2$; similarly write $\\exp^1 x = e^x$ and $\\exp^k x  = e^{\\exp^{k-1} x}$. If we write $y = \\ln^k x$, then $x = \\exp^k y$ and $dx = (\\exp^ky)(\\exp^{k-1}y)\\cdots (\\exp^1y)dy =\nx(\\ln^1 x) \\cdots (\\ln^{k-1}x)dy$. Now on\n$[\\exp^{k-1} 1,\\exp^k 1]$, we have\n$f(x) = x(\\ln^1 x) \\cdots (\\ln^{k-1}x)$, and thus substituting $y=\\ln^k x$ yields\n\\[\n\\int_{\\exp^{k-1} 1}^{\\exp^k 1} \\frac{dx}{f(x)} =\n\\int_{0}^{1} dy = 1.\n\\]\nIt follows that $\\int_1^{\\infty} \\frac{dx}{f(x)} = \\sum_{k=1}^{\\infty} \\int_{\\exp^{k-1} 1}^{\\exp^k 1} \\frac{dx}{f(x)}$ diverges, as desired."
+    }
+  ]
+}

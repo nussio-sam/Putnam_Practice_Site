@@ -1,0 +1,12 @@
+{
+  "year": "2009",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is no; indeed, $S = \\mathbb{Q} \\setminus \\{n+2/5 \\,|\\,\nn\\in\\mathbb{Z}\\}$ satisfies the given conditions. Clearly $S$ satisfies\n(a) and (b); we need only check that it satisfies (c). It suffices to\nshow that if $x = p/q$ is a fraction with $(p,q)=1$ and $p>0$, then we\ncannot have $1/(x(x-1)) = n+2/5$ for an integer $n$. Suppose otherwise; then\n\\[\n(5n+2)p(p-q) = 5q^2.\n\\]\nSince $p$ and $q$ are relatively prime, and $p$ divides $5q^2$, we must\nhave $p\\,|\\,5$, so $p=1$ or $p=5$. On the other hand, $p-q$ and $q$ are\nalso relatively prime, so $p-q$ divides $5$ as well, and $p-q$ must be\n$\\pm 1$ or $\\pm 5$. This leads to eight possibilities for $(p,q)$:\n$(1,0)$,  $(5,0)$,  $(5,10)$, $(1,-4)$, $(1,2)$, $(1,6)$, $(5,4)$,\n$(5,6)$. The first three are impossible, while the final five lead to\n$5n+2 = 16,-20,-36,16,-36$ respectively, none of which holds for\nintegral $n$.\n\n\\textbf{Remark.} More generally, no rational number of the form $m/n$,\nwhere $m,n$ are relatively prime and neither of $\\pm m$ is a quadratic\nresidue mod $n$, need be in $S$. If $x=p/q$ is in lowest terms and\n$1/(x(x-1)) = m/n+k$ for some integer $k$, then $p(p-q)$ is relatively\nprime to $q^2$; $q^2/(p(p-q)) = (m+kn)/n$ then implies that $m+kn = \\pm\nq^2$ and so $\\pm m$ must be a quadratic residue mod $n$."
+    }
+  ]
+}

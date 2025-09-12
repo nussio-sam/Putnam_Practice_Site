@@ -1,0 +1,12 @@
+{
+  "year": "1996",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "(due to Lenny Ng)\nFor $1 \\leq n \\leq p-1$, $p$ divides $\\binom pn$ and\n\\begin{align*}\n\\frac{1}{p} \\binom pn &= \\frac{1}{n} \\frac{p-1}{1} \\frac{p-2}{2} \\cdots\n\\frac{p-n+1}{n-1} \\\\\n&\\equiv \\frac{(-1)^{n-1}}{n} \\mymod{p},\n\\end{align*}\nwhere the congruence $x \\equiv y \\mymod{p}$ means that $x-y$ is a\nrational number whose numerator, in reduced form, is divisible by $p$.\nHence it suffices to show that\n\\[\n\\sum_{n=1}^k \\frac{(-1)^{n-1}}{n} \\equiv 0 \\mymod{p}.\n\\]\nWe distinguish two cases based on $p \\mymod{6}$. First suppose $p =\n6r+1$, so that $k = 4r$. Then\n\\begin{align*}\n\\sum_{n=1}^{4r} \\frac{(-1)^{n-1}}{n}\n&= \\sum_{n=1}^{4r} \\frac{1}{n} - 2 \\sum_{n=1}^{2r} \\frac{1}{2n} \\\\\n&= \\sum_{n=1}^{2r} \\left( \\frac{1}{n} - \\frac{1}{n} \\right)\n+ \\sum_{n=2r+1}^{3r} \\left( \\frac{1}{n} + \\frac{1}{6r+1-n} \\right) \\\\\n&= \\sum_{n=2r+1}^{3r} \\frac{p}{n(p-n)} \\equiv 0 \\mymod{p},\n\\end{align*}\nsince $p = 6r+1$.\n\nNow suppose $p = 6r+5$, so that $k = 4r + 3$. A similar argument gives\n\\begin{align*}\n\\sum_{n=1}^{4r+3}\\ \\frac{(-1)^{n-1}}{n}\n&= \\sum_{n=1}^{4r+3} \\frac{1}{n} + 2 \\sum_{n=1}^{2r+1} \\frac{1}{2n} \\\\\n&= \\sum_{n=1}^{2r+1} \\left( \\frac{1}{n} - \\frac{1}{n} \\right)\n+ \\sum_{n=2r+2}^{3r+2} \\left( \\frac{1}{n} + \\frac{1}{6r+5-n} \\right) \\\\\n&= \\sum_{n=2r+2}^{3r+2} \\frac{p}{n(p-n)} \\equiv 0 \\mymod{p}.\n\\end{align*}"
+    }
+  ]
+}

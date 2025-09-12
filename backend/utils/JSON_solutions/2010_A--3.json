@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "If $a=b=0$, then the desired result holds trivially, so we assume that at least one of $a,b$ is nonzero.\nPick any point $(a_0, b_0) \\in \\mathbb{R}^2$, and let $L$ be the line given by the parametric equation\n$L(t) = (a_0,b_0) + (a,b) t$ for $t\\in \\mathbb{R}$. By the chain rule and the given equation, we have $\\frac{d}{dt}(h\\circ L) = h\\circ L$. If we write $f = h\\circ L:\\mathbb{R} \\to \\mathbb{R}$, then $f'(t) = f(t)$ for all $t$. It follows that $f(t) = Ce^t$ for some constant $C$. Since $|f(t)| \\leq M$ for all $t$, we must have $C=0$.\nIt follows that $h(a_0,b_0) = 0$; since $(a_0,b_0)$ was an arbitrary point,\n$h$ is identically $0$ over all of $\\mathbb{R}^2$."
+    }
+  ]
+}

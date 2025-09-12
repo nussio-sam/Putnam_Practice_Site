@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The smallest distance is 3, achieved by $A = (0,0)$, $B = (3,0)$, $C = (0,4)$.\nTo check this, it suffices to check that $AB$ cannot equal 1 or 2. (It cannot equal 0\nbecause if two of the points were to coincide, the three points would be collinear.)\n\nThe triangle inequality implies that $|AC - BC| \\leq AB$, with equality if and only if $A,B,C$\nare collinear. If $AB = 1$, we may assume without loss of generality that $A = (0,0)$, $B = (1,0)$.\nTo avoid collinearity, we must have $AC = BC$, but this forces $C = (1/2, y)$ for some $y \\in \\RR$,\na contradiction. (One can also treat this case by scaling by a factor of 2 to reduce to the case $AB=2$,\ntreated in the next paragraph.)\n\nIf $AB = 2$, then we may assume without loss of generality that $A = (0,0), B = (2,0)$.\nThe triangle inequality implies $|AC - BC| \\in \\{0,1\\}$.\nAlso, for $C = (x,y)$, $AC^2 = x^2 + y^2$ and $BC^2 = (2-x)^2 + y^2$ have the same parity;\nit follows that $AC = BC$. Hence $c = (1,y)$ for some $y \\in \\RR$, so $y^2$ and $y^2+1=BC^2$\nare consecutive perfect squares. This can only happen for $y = 0$, but then $A,B,C$ are collinear,\na contradiction again.\n\n\\textbf{Remark.} Manjul Bhargava points out that more generally, a \\emph{Heronian triangle}\n(a triangle with integer sides and rational area) cannot have a side of length 1 or 2 (and again\nit is enough to treat the case of length 2). The original\nproblem follows from this because a triangle whose vertices have integer coordinates has area\nequal to half an integer (by Pick's formula or the explicit formula for the area as a determinant)."
+    }
+  ]
+}

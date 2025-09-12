@@ -1,0 +1,12 @@
+{
+  "year": "2020",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $4^k$. \n\n\\noindent\n\\textbf{First solution.}\nLet $S_k$ denote the given sum. Then, with the convention that ${n\\choose{-1}} = 0$ for any $n\\geq 0$, we have for $k\\geq 1$,\n\\begin{align*}\nS_k &= \\sum_{j=0}^k 2^{k-j} \\left[ {{k-1+j}\\choose {j}} + {{k-1+j}\\choose {j-1}} \\right] \\\\\n&= 2\\sum_{j=0}^{k-1} 2^{k-1-j} {{k-1+j}\\choose j}+{{2k-1}\\choose k} + \\sum_{j=1}^k 2^{k-j}{{k-1+j}\\choose{j-1}} \\\\\n&= 2S_{k-1} + {{2k-1}\\choose{k}} + \\sum_{j=0}^{k-1} 2^{k-j-1}{{k+j}\\choose j} \\\\\n&= 2S_{k-1}+S_k/2\n\\end{align*}\nand so $S_k = 4S_{k-1}$. Since $S_0 = 1$, it follows that $S_k = 4^k$ for all $k$.\n\n\\noindent\n\\textbf{Second solution.}\nConsider a sequence of fair coin flips $a_1, a_2, \\dots$ and define the random variable $X$ to be the index of the $(k+1)$-st occurrence of heads.\nThen\n\\[\nP[X = n] = \\binom{n-1}{k} 2^{-n};\n\\]\nwriting $n = k+j+1$, we may thus rewrite the given sum as\n\\[\n2^{2k+1} P[X \\leq 2k+1].\n\\]\nIt now suffices to observe that $P[X \\leq 2k+1] = \\frac{1}{2}$:\nwe have $X \\leq 2k+1$ if and only if there are at least $k+1$ heads among the first $2k+1$ flips,\nand there are exactly as many outcomes with at most $k$ heads.\n\n\\noindent\n\\textbf{Third solution.}\n(by Pankaj Sinha)\nThe sum in question in the coefficient of $x^k$ in the formal power series\n\\begin{align*}\n\\sum_{j=0}^k 2^{k-j} (1+x)^{k+j} &= 2^k (1+x)^k \\sum_{j=0}^k 2^{-j} (1+x)^j \\\\\n&= 2^k (1+x)^k \\frac{1 - (1+x)^{k+1}/2^{k+1}}{1 - (1+x)/2} \\\\\n&= \\frac{2^{k+1}(1+x)^k - (1+x)^{2k+1}}{1-x} \\\\\n&= (2^{k+1}(1+x)^k - (1+x)^{2k+1})(1+x+\\cdots).\n\\end{align*}\nThis evidently equals\n\\begin{align*}\n2^{k+1} \\sum_{j=0}^k \\binom{k}{j} - \\sum_{j=0}^k \\binom{2k+1}{j} &= 2^{k+1} (2^k) - \\frac{1}{2} 2^{2k+1}  \\\\\n&= 2^{2k+1} - 2^{2k} = 2^{2k} = 4^k.\n\\end{align*}\n\n\\noindent\n\\textbf{Remark.}\nThis sum belongs to a general class that can be evaluated mechanically using the \\emph{WZ method}. See for example the book \\textit{$A=B$}\nby Petvoksek--Wilf--Zeilberger."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The probability is $1/99$. In fact, we show by induction on $n$\nthat after $n$ shots, the probability of having made any number of\nshots from $1$ to $n-1$ is equal to $1/(n-1)$. This is evident\nfor $n=2$. Given the result for $n$, we see that the probability of\nmaking $i$ shots after $n+1$ attempts is\n\\begin{align*}\n\\frac{i-1}{n} \\frac{1}{n-1} + \\left( 1 - \\frac{i}{n} \\right) \\frac{1}{n-1}\n&= \\frac{(i-1) + (n-i)}{n(n-1)} \\\\\n&= \\frac{1}{n},\n\\end{align*}\nas claimed."
+    }
+  ]
+}

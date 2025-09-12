@@ -1,0 +1,12 @@
+{
+  "year": "2022",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $2n-2$. Write $p(x) = a_nx^n+\\cdots+a_1x+a_0$ and $p(x)^2 = b_{2n}x^{2n}+\\cdots+b_1x+b_0$. Note that $b_0 = a_0^2$ and $b_{2n} = a_n^2$. We claim that not all of the remaining $2n-1$ coefficients $b_1,\\ldots,b_{2n-1}$ can be negative, whence the largest possible number of negative coefficients is $\\leq 2n-2$. Indeed, suppose $b_i <0$ for $1\\leq i\\leq 2n-1$. Since $b_1 = 2a_0a_1$, we have $a_0 \\neq 0$. Assume $a_0>0$ (or else replace $p(x)$ by $-p(x)$). We claim by induction on $i$ that $a_i < 0$ for $1\\leq i\\leq n$. For $i=1$, this follows from $2a_0a_1 = b_1<0$. If $a_i<0$ for $1\\leq i\\leq k-1$, then\n\\[\n2a_0a_k = b_k - \\sum_{i=1}^{k-1} a_i a_{k-i} < b_k < 0\n\\]\nand thus $a_k<0$, completing the induction step. But now $b_{2n-1} = 2a_{n-1}a_n > 0$, contradiction.\n\nIt remains to show that there is a polynomial $p(x)$ such that $p(x)^2$ has $2n-2$ negative coefficients. For example, we may take\n\\[\np(x) = n(x^n+1) - 2(x^{n-1} + \\cdots + x),\n\\]\nso that\n\\begin{align*}\np(x)^2 &= n^2(x^{2n} + x^n + 1) - 2n(x^n+1)(x^{n-1}+\\cdots+x)\\\\\n&\\qquad \n+ (x^{n-1} + \\cdots + x)^2.\n\\end{align*}\nFor $i\\in \\{1,\\dots,n-1,n+1,\\dots,n-1\\}$, the coefficient of $x^i$ in $p(x)^2$ is at most $-2n$ (coming from the cross term)\nplus $-2n+2$ (from expanding $(x^{n-1} + \\cdots + x)^2$), and hence negative."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "b)",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "At this point, only the index $i=1$ can be eligible (so it must be).\nFind the largest index $j$ for which $B_j$ is nonempty.\nIf $j=1$, proceed to (c).\nOtherwise, move 1 ball from $B_1$ to $B_j$; in case this makes $j$ eligible,\nmove $j$ balls from $B_j$ to $B_1$. Then repeat (b)."
+    }
+  ]
+}

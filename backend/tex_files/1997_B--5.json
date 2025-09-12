@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1997",
+  "question_number": 5,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Define the sequence $x_1 = 2$, $x_n = 2^{x_{n-1}}$ for $n > 1$. It\nsuffices to show that for every $n$, $x_m \\equiv x_{m+1} \\equiv \\cdots\n\\pmod n$ for some $m < n$. We do this by induction on $n$, with $n=2$\nbeing obvious.\n\nWrite $n = 2^a b$, where $b$ is odd. It suffices to show that $x_m\n\\equiv \\cdots$ modulo $2^a$ and modulo $b$, for some $m < n$. For the\nformer, we only need $x_{n-1} \\geq a$, but clearly\n$x_{n-1} \\geq n$ by induction on $n$. For the latter, note that\n$x_m \\equiv x_{m+1} \\equiv \\cdots\n\\pmod b$ as long as $x_{m-1} \\equiv x_m \\equiv \\cdots \\pmod{\\phi(b)}$,\nwhere $\\phi(n)$ is the Euler totient function. By hypothesis, this\noccurs for some $m < \\phi(b) + 1 \\leq n$. (Thanks to Anoop Kulkarni\nfor catching a lethal typo in an earlier version.)"
+    }
+  ]
+}

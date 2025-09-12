@@ -1,0 +1,12 @@
+{
+  "year": "2002",
+  "question_number": "b)",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Column $j$ contains one zero and two empty positions.\n\\end{enumerate}\nPlayer 0 next plays at $A_{ij}$. To prevent a zero column, Player 1\nmust play in column $j$, upon which Player 0 completes the $2 \\times 2$\nsubmatrix in (a) for the win.\n\nNote: one can also solve this problem directly by making a tree of\npossible play sequences. This tree can be considerably collapsed\nusing symmetries: the symmetry between rows and columns, the invariance\nof the outcome under reordering of rows or columns, and the fact that\nthe scenario after a sequence of moves does not depend on the order of\nthe moves (sometimes called ``transposition invariance'').\n\nNote (due to Paul Cheng):\none can reduce Determinant\nTic-Tac-Toe to a variant of ordinary tic-tac-toe.\nNamely, consider a tic-tac-toe grid\nlabeled as follows:\n\\[\n\\begin{array}{c|c|c}\nA_{11} & A_{22} & A_{33} \\\\\n\\hline\nA_{23} & A_{31} & A_{12} \\\\\n\\hline\nA_{32} & A_{13} & A_{21}\n\\end{array}\n\\]\nThen each term in the expansion of the determinant occurs in a row\nor column of the grid. Suppose Player 1 first plays in the top left.\nPlayer 0 wins by playing first in the top row, and second in the left\ncolumn. Then there are only one row and column left for Player 1\nto threaten, and Player 1 cannot already threaten both on the third move,\nso Player 0 has time to block both."
+    }
+  ]
+}

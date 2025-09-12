@@ -1,0 +1,12 @@
+{
+  "year": "1996",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The claim is false. There are $\\binom{6}{3} = 20$ ways to choose 3 of the\n6 courses; have each student choose a different set of 3 courses. Then\neach pair of courses is chosen by 4 students (corresponding to the\nfour ways to complete this pair to a set of 3 courses) and is not\nchosen by 4 students (corresponding to the 3-element subsets of the\nremaining 4 courses).\n\nNote: Assuming that no two students choose the same courses,\nthe above counterexample is unique (up to permuting students).\nThis may be seen as follows: Given a group of students, suppose that\nfor any pair of courses (among the six) there are at most 4 students\ntaking both, and at most 4 taking neither.  Then there are at most\n$120=(4+4)\\binom{6}{2}$ pairs $(s,p)$, where $s$ is a student, and $p$\nis a set of two courses of which $s$ is taking either both or none.\nOn the other hand, if a student $s$ is taking $k$ courses, then he/she\noccurs in $f(k)=\\binom{k}{2}+\\binom{6-k}{2}$ such pairs $(s,p)$.  As\n$f(k)$ is minimized for $k=3$, it follows that every student occurs in\nat least $6=\\binom{3}{2}+\\binom{3}{2}$ such pairs $(s,p)$.  Hence\nthere can be at most $120/6=20$ students, with equality only if each\nstudent takes 3 courses, and for each set of two courses, there are\nexactly 4 students who take both and exactly 4 who take neither.\nSince there are only 4 ways to complete a given pair of courses to a\nset of 3, and only 4 ways to choose 3 courses not containing the given\npair, the only way for there to be 20 students (under our hypotheses)\nis if all sets of 3 courses are in fact taken.  This is the desired conclusion.\n\nHowever, Robin Chapman has pointed out that the solution is not unique\nin the problem as stated, because a given selection of courses may be\nmade by more than one student. One alternate solution is to identify\nthe 6 courses with pairs of antipodal vertices of an icosahedron, and\nhave each student pick a different face and choose the three vertices\ntouching that face. In this example, each of 10 selections is made by\na pair of students."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2019",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is no. Let $g :\\thinspace \\mathbb{R} \\to \\mathbb{R}$ be any continuous function with $g(t+2) = g(t)$ for all $t$ and $\\int_0^2 g(t)\\,dt = 0$ (for instance, $g(t) = \\sin(\\pi t)$). Define $f(x,y,z) = g(z)$. We claim that for any sphere $S$ of radius $1$, $\\iint_S f\\,dS = 0$.\n\n\nIndeed, let $S$ be the unit sphere centered at $(x_0,y_0,z_0)$. We can parametrize $S$ by $S(\\phi,\\theta) = (x_0,y_0,z_0)+(\\sin\\phi\\cos\\theta,\n\\sin\\phi\\sin\\theta,\\cos\\phi)$ for $\\phi \\in [0,\\pi]$ and $\\theta \\in [0,2\\pi]$. Then we have\n\n\\begin{align*}\n\\iint_S f(x,y,z)\\,dS &= \\int_0^\\pi \\int_0^{2\\pi} f(S(\\phi,\\theta))\\left\\|\\frac{\\partial S}{\\partial \\phi} \\times \\frac{\\partial S}{\\partial \\theta}\\right\\|\\,d\\theta\\,d\\phi \\\\\n&=  \\int_0^\\pi \\int_0^{2\\pi} g(z_0+\\cos\\phi) \\sin\\phi\\,d\\theta\\,d\\phi \\\\\n&= 2\\pi \\int_{-1}^1 g(z_0+t)\\,dt,\n\\end{align*}\n\nwhere we have used the substitution $t = \\cos\\phi$; but this last integral is $0$ for any $z_0$ by construction.\n\n\\noindent\n\\textbf{Remark.}\nThe solution recovers the famous observation of Archimedes that the surface area of a spherical cap is linear in the height of the cap. In place of spherical coordinates, one may also compute $\\iint_S f(x,y,z)\\,dS$ by computing the integral over a ball of radius $r$, then computing the derivative with respect to $r$ and evaluating at $r=1$.\n\nNoam Elkies points out that a similar result holds in $\\mathbb{R}^n$ for any $n$. Also, there exist nonzero continuous functions on $\\mathbb{R}^n$ whose integral over any unit ball vanishes; this implies certain negative results about image reconstruction."
+    }
+  ]
+}

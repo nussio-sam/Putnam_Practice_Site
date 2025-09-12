@@ -1,0 +1,12 @@
+{
+  "year": "2013",
+  "question_number": "3",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Suppose on the contrary that $a_0 + a_1 y + \\cdots + a_n y^n$ is nonzero for $0 < y < 1$. By the intermediate value theorem, this is only possible if $a_0 + a_1 y + \\cdots + a_n y^n$ has the same sign for $0 < y < 1$; without loss of generality, we may assume that $a_0 + a_1 y + \\cdots + a_n y^n > 0$ for $0 < y < 1$. For the given value of $x$, we then have\n\\[\na_0 x^m + a_1 x^{2m} + \\cdots + a_n x^{(n+1)m} \\geq 0\n\\]\nfor $m=0,1,\\dots$, with strict inequality for $m>0$.\nTaking the sum over all $m$ is absolutely convergent and hence valid; this yields\n\\[\n\\frac{a_0}{1-x} + \\frac{a_1}{1-x^2} + \\cdots + \\frac{a_n}{1-x^{n+1}} > 0,\n\\]\na contradiction."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2024",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "This is possible if and only if $n$ is odd and $k = (n+1)/2$.\n\nWe first check that these conditions are necessary. If the pairs $(a_1,b_1),\\dots,(a_n,b_n)$\nindex squares of the grid with no two in the same row or column,\nthen each of the two sequences $a_1,\\dots,a_n$\nand $b_1,\\dots,b_n$ is a permutation of $\\{1,\\dots,n\\}$, and so in particular has sum $1 + \\cdots +n = \\frac{n(n+1)}{2}$. In particular, if the selected numbers are $1,2,\\dots,n$ in some order, then\n\\begin{align*}\n\\frac{n(n+1)}{2} &= \\sum_{i=1}^n (a_i+b_i-k) \\\\\n&= \\sum_{i=1}^n a_i + \\sum_{i=1}^n b_i - \\sum_{i=1}^n k \\\\\n&= \\frac{n(n+1)}{2} + \\frac{n(n+1)}{2} - nk\n\\end{align*}\nwhich simplifies to $k = (n+1)/2$.\n\nWe next check that these conditions are sufficient. For this, it suffices to observe that\nthe sequence\n\\begin{gather*}\n\\left(1, \\frac{n+1}{2}\\right), \\left(2, \\frac{n+3}{2}\\right), \\dots,\n\\left(\\frac{n+1}{2}, n\\right), \\\\\n\\left(\\frac{n+3}{2}, 1\\right), \\dots, \\left(n, \\frac{n-1}{2}\\right)\n\\end{gather*}\nof grid entries equals\n\\[\n1, 3, \\dots, n, 2, \\dots, n-1.\n\\]\nWe illustrate this for the case $n=5, k=3$ below; the selected entries are parenthesized.\n\\[\n\\begin{pmatrix}\n-1 & 0 & (1) & 2 & 3 \\\\\n0 & 1 & 2 & (3) & 4 \\\\\n1 & 2 & 3 & 4 & (5) \\\\\n(2) & 3 & 4 & 5 & 6 \\\\\n3 & (4) & 5 & 6 & 7\n\\end{pmatrix}\n\\]"
+    }
+  ]
+}

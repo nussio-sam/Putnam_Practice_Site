@@ -1,0 +1,12 @@
+{
+  "year": "2021",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is $578$. \n\nEach hop corresponds to adding one of the $12$ vectors $(0,\\pm 5)$, $(\\pm 5,0)$, $(\\pm 3,\\pm 4)$, $(\\pm 4,\\pm 3)$ to the position of the grasshopper. Since $(2021,2021) = 288(3,4)+288(4,3)+(0,5)+(5,0)$, the grasshopper can reach $(2021,2021)$ in $288+288+1+1=578$ hops.\n\nOn the other hand, let $z=x+y$ denote the sum of the $x$ and $y$ coordinates of the grasshopper, so that it starts at $z=0$ and ends at $z=4042$. Each hop changes the sum of the $x$ and $y$ coordinates of the grasshopper by at most $7$, and $4042 > 577 \\times 7$; it follows immediately that the grasshopper must take more than $577$ hops to get from $(0,0)$ to $(2021,2021)$.\n\n\\noindent\n\\textbf{Remark.}\nThis solution implicitly uses the distance function \n\\[\nd((x_1, y_1), (x_2, y_2)) = |x_1 - x_2| + |y_1 - y_2|\n\\]\non the plane, variously called the \\emph{taxicab metric}, the \\emph{Manhattan metric}, or the \\emph{$L^1$-norm} (or $\\ell_1$-norm)."
+    }
+  ]
+}

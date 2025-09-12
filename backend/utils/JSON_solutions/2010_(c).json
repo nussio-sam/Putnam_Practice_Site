@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "c)",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "At this point, all of the balls are in $B_1$. For $i=2,\\dots,2010$,\nmove one ball from $B_1$ to $B_i$ $n$ times."
+    }
+  ]
+}

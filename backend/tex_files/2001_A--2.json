@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\2001",
+  "question_number": 2,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Let $P_n$ denote the desired probability.  Then $P_1=1/3$, and, for\n$n>1$,\n\\begin{align*}\n P_n &= \\left(\\frac{2n}{2n+1}\\right) P_{n-1}\n        +\\left(\\frac{1}{2n+1}\\right) (1-P_{n-1}) \\\\\n       &= \\left(\\frac{2n-1}{2n+1}\\right)P_{n-1} + \\frac{1}{2n+1}.\n\\end{align*}\nThe recurrence yields $P_2=2/5$, $P_3=3/7$, and by a simple\ninduction, one then checks that for general $n$ one has $P_n=n/(2n+1)$.\n\nNote: Richard Stanley points out the following noninductive argument.\nPut $f(x) = \\prod_{k=1}^n (x+2k)/(2k+1)$; then the coefficient of\n$x^i$ in $f(x)$ is the probability of getting exactly $i$ heads. Thus\nthe desired number is $(f(1) - f(-1))/2$, and both values of $f$ can\nbe computed directly: $f(1) = 1$, and\n\\[\nf(-1) = \\frac{1}{3} \\times \\frac{3}{5} \\times \\cdots \\times \\frac{2n-1}{2n+1}\n= \\frac{1}{2n+1}.\n\\]"
+    }
+  ]
+}

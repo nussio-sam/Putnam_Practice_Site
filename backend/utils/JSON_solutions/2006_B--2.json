@@ -1,0 +1,12 @@
+{
+  "year": "2006",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Let $\\{x\\} = x - \\lfloor x \\rfloor$ denote the fractional part of $x$.\nFor $i=0,\\dots, n$, put $s_i = x_1 + \\cdots + x_i$ (so that $s_0 = 0$).\nSort the numbers $\\{s_0\\}, \\dots, \\{s_n\\}$ into ascending order,\nand call the result $t_0, \\dots, t_n$. Since $0 = t_0 \\leq \\cdots \\leq\nt_n < 1$, the differences\n\\[\nt_1 - t_0, \\dots, t_n - t_{n-1}, 1 - t_n\n\\]\nare nonnegative and add up to 1. Hence (as in  the pigeonhole principle) one\nof these differences\nis no more than $1/(n+1)$; if it is anything other than $1 - t_n$,\nit equals $\\pm (\\{s_i\\} - \\{s_j\\})$ for some\n$0 \\leq i < j \\leq n$. Put $S = \\{x_{i+1}, \\dots, x_j\\}$ and\n$m = \\lfloor s_i \\rfloor - \\lfloor s_j \\rfloor$; then\n\\begin{align*}\n\\left| m + \\sum_{s \\in S} s \\right|\n&= |m + s_j - s_i| \\\\\n&= |\\{s_j\\} - \\{s_i\\}| \\\\\n&\\leq \\frac{1}{n+1},\n\\end{align*}\nas desired. In case $1 - t_n \\leq 1 / (n+1)$, we take\n$S = \\{x_1, \\dots, x_n\\}$ and $m = -\\lceil s_n \\rceil$, and again obtain\nthe desired conclusion."
+    }
+  ]
+}

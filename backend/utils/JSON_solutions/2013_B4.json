@@ -1,0 +1,12 @@
+{
+  "year": "2013",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "\\newcommand{\\Var}{\\mathrm{Var}}\n\nWrite $f_0(x) = f(x)-\\mu(f)$ and $g_0(x) = g(x)-\\mu(g)$, so that $\\int_0^1 f_0(x)^2\\,dx = \\Var(f)$, $\\int_0^1 g_0(x)^2\\,dx = \\Var(g)$, and $\\int_0^1 f_0(x)\\,dx = \\int_0^1 g_0(x)\\,dx = 0$. Now since $|g(x)| \\leq M(g)$ for all $x$, $0\\leq \\int_0^1 f_0(x)^2(M(g)^2-g(x)^2)\\,dx = \\Var(f) M(g)^2-\\int_0^1 f_0(x)^2g(x)^2\\,dx$, and similarly $0 \\leq \\Var(g)M(f)^2-\\int_0^1 f(x)^2g_0(x)^2\\,dx$. Summing gives\n\\begin{equation}\n\\Var(f)M(g)^2+\\Var(g)M(f)^2\n\\label{eq:1}\n\\geq \\int_0^1 (f_0(x)^2g(x)^2+f(x)^2g_0(x)^2)\\,dx.\n\\end{equation}\nNow\n\\begin{align*}\n&\\int_0^1 (f_0(x)^2g(x)^2+f(x)^2g_0(x)^2)\\,dx-\\Var(fg) \\\\&= \\int_0^1 (f_0(x)^2g(x)^2+f(x)^2g_0(x)^2-(f(x)g(x)-\\int_0^1 f(y)g(y)\\,dy)^2)\\,dx;\n\\end{align*}\nsubstituting $f_0(x)+\\mu(f)$ for $f(x)$ everywhere and $g_0(x)+\\mu(g)$ for $g(x)$ everywhere, and using the fact that $\\int_0^1 f_0(x)\\,dx = \\int_0^1 g_0(x)\\,dx = 0$, we can expand and simplify the right hand side of this equation to obtain\n\\begin{align*}\n&\\int_0^1 (f_0(x)^2g(x)^2+f(x)^2g_0(x)^2)\\,dx-\\Var(fg) \\\\\n&= \\int_0^1 f_0(x)^2g_0(x)^2\\,dx \\\\\n&-2\\mu(f)\\mu(g)\\int_0^1 f_0(x)g_0(x)\\,dx +(\\int_0^1 f_0(x)g_0(x)\\,dx)^2 \\\\\n&\\geq -2\\mu(f)\\mu(g)\\int_0^1 f_0(x)g_0(x)\\,dx.\n\\end{align*}\nBecause of \\eqref{eq:1}, it thus suffices to show that\n\\begin{equation}\n2\\mu(f)\\mu(g)\\int_0^1 f_0(x)g_0(x)\\,dx\n\\label{eq:3} \\leq \\Var(f)M(g)^2+\\Var(g)M(f)^2.\n\\end{equation}\nNow since $(\\mu(g) f_0(x)-\\mu(f) g_0(x))^2 \\geq 0$ for all $x$, we have\n\\begin{align*}\n2\\mu(f)\\mu(g) \\int_0^1 f_0(x)g_0(x)\\,dx\n& \\leq \\int_0^1 (\\mu(g)^2 f_0(x)^2 + \\mu(f)^2 g_0(x)^2) dx \\\\\n& = \\Var(f) \\mu(g)^2 + \\Var(g) \\mu(f)^2 \\\\\n& \\leq \\Var(f) M(g)^2 + \\Var(g) M(f)^2,\n\\end{align*}\nestablishing \\eqref{eq:3} and completing the proof."
+    }
+  ]
+}

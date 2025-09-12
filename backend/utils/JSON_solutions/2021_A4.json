@@ -1,0 +1,12 @@
+{
+  "year": "2021",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The limit exists and equals $\\frac{\\sqrt{2}}{2} \\pi \\log 2$.\n\nWe first note that we can interchange $x$ and $y$ to obtain\n\\[\nI(R) = \\iint_{x^2+y^2 \\leq R^2} \\left( \\frac{1+2y^2}{1+x^4+6x^2y^2+y^4} - \\frac{1+x^2}{2+x^4+y^4} \\right)\\,dx\\,dy.\n\\]\nAveraging the two expressions for $I(R)$ yields\n\\[\nI(R) = \\iint_{x^2+y^2 \\leq R^2} (f(x,y) - g(x,y))\\,dx\\,dy\n\\]\nwhere\n\\begin{align*}\nf(x,y) &= \\frac{1+x^2+y^2}{1 + x^4 + 6x^2y^2 + y^4} \\\\\ng(x,y) &= \\frac{1+x^2/2+y^2/2}{2 + x^4 + y^4}.\n\\end{align*}\nNow note that\n\\[f(x,y) = 2 g(x+y, x-y).\n\\]\nWe can thus write\n\\[\nI(R) = \\iint_{R^2 \\leq x^2 +y^2 \\leq 2R^2} g(x,y)\\,dx\\,dy.\n\\]\nTo compute this integral, we switch to polar coordinates:\n\\begin{align*}\nI(R) &= \\int_R^{R\\sqrt{2}} \\int_0^{2\\pi} g(r\\cos \\theta, r \\sin \\theta)r\\,dr\\,d\\theta \\\\\n&=  \\int_R^{R\\sqrt{2}} \\int_0^{2\\pi} \\frac{1 + r^2/2}{2 + r^4(1 - (\\sin^2 2\\theta)/2)} r\\,dr\\,d\\theta.\n\\end{align*}\nWe rescale $r$ to remove the factor of $R$ from the limits of integration:\n\\begin{align*}\nI(R) & =  \\int_1^{\\sqrt{2}} \\int_0^{2\\pi} \\frac{1 + R^2 r^2/2}{2 + R^4 r^4(1 - (\\sin^2 2\\theta)/2)} R^2 r\\,dr\\,d\\theta.\n\\end{align*}\n\nSince the integrand is uniformly bounded for $R \\gg 0$, we may take the limit over $R$ through the integrals to obtain\n\\begin{align*}\n\\lim_{R \\to \\infty} I(R) &= \\int_1^{\\sqrt{2}} \\int_0^{2\\pi} \\frac{r^2/2}{r^4(1 - (\\sin^2 2\\theta)/2)} r\\,dr\\,d\\theta \\\\\n&= \\int_1^{\\sqrt{2}} \\frac{dr}{r} \\int_0^{2\\pi} \\frac{1}{2- \\sin^2 2\\theta} d\\theta \\\\\n&= \\log \\sqrt{2} \\int_0^{2\\pi} \\frac{1}{1 + \\cos^2 2\\theta} d\\theta \\\\\n&= \\frac{1}{2} \\log 2 \\int_0^{2\\pi} \\frac{2}{3 + \\cos 4\\theta} d\\theta.\n\\end{align*}\nIt thus remains to evaluate \n\\[\n\\int_0^{2\\pi} \\frac{2}{3 + \\cos 4\\theta} d\\theta = \n2 \\int_0^{\\pi} \\frac{2}{3 + \\cos \\theta} d\\theta.\n\\]\nOne option for this is to use the half-angle substitution $t = \\tan (\\theta/2)$ to get\n\\begin{align*}\n\\int_{-\\infty}^\\infty \\frac{4}{3(1+t^2) + (1-t^2)}\\,dt\n&= \\int_{-\\infty}^\\infty \\frac{2}{2+t^2}\\,dt \\\\\n&= \\sqrt{2} \\arctan \\left( \\frac{x}{\\sqrt{2}} \\right)^{\\infty}_{-\\infty} \\\\\n&= \\sqrt{2} \\pi.\n\\end{align*}\nPutting this together yields the claimed result."
+    }
+  ]
+}

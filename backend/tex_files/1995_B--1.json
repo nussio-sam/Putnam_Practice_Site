@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\1995",
+  "question_number": 1,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "For a given $\\pi$, no more than three different values of $\\pi(x)$\nare possible (four would require one part each of size at least\n1,2,3,4, and that's already more than 9 elements). If no such $x, y$\nexist, each pair $(\\pi(x), \\pi'(x))$ occurs for at most 1 element of\n$x$, and\nsince there are only $3 \\times 3$ possible pairs, each must occur\nexactly once. In particular, each value of $\\pi(x)$ must occur 3\ntimes. However, clearly any given value of $\\pi(x)$ occurs $k\\pi(x)$\ntimes, where $k$ is the number of distinct partitions of that size.\nThus $\\pi(x)$ can occur 3 times only if it equals 1 or 3, but we have\nthree distinct values for which it occurs, contradiction."
+    }
+  ]
+}

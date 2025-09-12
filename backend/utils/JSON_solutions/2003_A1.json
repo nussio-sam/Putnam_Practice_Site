@@ -1,0 +1,12 @@
+{
+  "year": "2003",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "There are $n$ such sums. More precisely, there is exactly one such sum\nwith $k$ terms for each of $k=1, \\dots, n$ (and clearly no others).\nTo see this, note that if $n = a_1 + a_2 + \\cdots + a_k$ with\n$a_1 \\leq a_2 \\leq \\cdots \\leq a_k \\leq a_1 + 1$, then\n\\begin{align*}\nka_1 &= a_1 + a_1 + \\cdots + a_1 \\\\\n&\\leq n \\leq a_1 + (a_1 + 1) + \\cdots + (a_1 + 1) \\\\\n&= ka_1 + k-1.\n\\end{align*}\nHowever, there is a unique integer $a_1$ satisfying these inequalities,\nnamely $a_1 = \\lfloor n/k \\rfloor$. Moreover, once $a_1$ is fixed,\nthere are $k$ different possibilities for the sum $a_1 + a_2 + \\cdots + a_k$:\nif $i$ is the last integer such that $a_i = a_1$, then the sum equals\n$ka_1 + (i-1)$. The possible values of $i$ are $1, \\dots, k$,\nand exactly one of these sums comes out equal to $n$, proving\nour claim.\n\n\\textbf{Note:}\nIn summary, there is a unique partition of $n$ with $k$ terms that is\n``as equally spaced as possible''.\nOne can also obtain essentially the same construction inductively: except\nfor the all-ones sum, each partition of $n$ is obtained by ``augmenting''\na unique partition of $n-1$."
+    }
+  ]
+}

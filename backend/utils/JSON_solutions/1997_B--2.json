@@ -1,0 +1,12 @@
+{
+  "year": "1997",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "It suffices to show that $|f(x)|$ is bounded for $x \\geq 0$, since $f(-x)$\nsatisfies the same equation as $f(x)$.  But then\n\\begin{align*}\n\\frac{d}{dx}\\left(\n(f(x))^2 + (f'(x))^2 \\right) &= 2f'(x)(f(x)+f''(x)) \\\\\n&= -2xg(x)(f'(x))^2 \\leq 0,\n\\end{align*}\nso that $(f(x))^2 \\leq (f(0))^2 + (f'(0))^2$ for $x\\geq 0$."
+    }
+  ]
+}

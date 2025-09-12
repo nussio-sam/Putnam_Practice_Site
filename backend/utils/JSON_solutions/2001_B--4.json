@@ -1,0 +1,12 @@
+{
+  "year": "2001",
+  "question_number": "4",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "For a rational number $p/q$ expressed in lowest terms, define\nits {\\it height} $H(p/q)$ to be $|p|+|q|$.  Then for any $p/q\\in S$\nexpressed in lowest terms, we have $H(f(p/q))=|q^2-p^2|+|pq|$; since\nby assumption $p$ and $q$ are nonzero integers with $|p|\\neq |q|$,\nwe have\n\\begin{align*}\nH(f(p/q)) - H(p/q) &= |q^2-p^2|+|pq| -|p| -|q| \\\\\n  &\\geq 3+ |pq| -|p| - |q| \\\\\n&= (|p|-1)(|q|-1) + 2 \\geq 2 .\n\\end{align*}\nIt follows that $f^{(n)}(S)$ consists solely of numbers of height\nstrictly larger than $2n+2$, and hence\n\\[\\cap_{n=1}^\\infty f^{(n)}(S) = \\emptyset.\\]\n\nNote: many choices for the height function are possible: one can\ntake $H(p/q) = \\max{|p|, |q|}$, or $H(p/q)$ equal to the total number of\nprime factors of $p$ and $q$, and so on. The key properties of the height\nfunction are that on one hand, there are only finitely many rationals with\nheight below any finite bound, and on the other hand, the height function\nis a sufficiently ``algebraic'' function of its argument that one can\nrelate the heights of $p/q$ and $f(p/q)$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2015",
+  "question_number": "1",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "\\textbf{First solution:}\nWithout loss of generality, assume that $A$ and $B$ lie in the first quadrant with $A = (t_1,1/t_1)$, $B = (t_2,1/t_2)$, and $t_1<t_2$. If $P = (t,1/t)$ with $t_1 \\leq t \\leq t_2$, then the area of triangle $APB$ is\n\\[\n\\frac{1}{2} \\left| \\begin{matrix} 1 & 1 & 1 \\\\ t_1 & t & t_2 \\\\ 1/t_1 & 1/t & 1/t_2 \\end{matrix} \\right| = \\frac{t_2-t_1}{2t_1t_2} (t_1+t_2-t-t_1t_2/t).\n\\]\nWhen $t_1,t_2$ are fixed, this is maximized when $t+t_1t_2/t$ is minimized, which by AM-GM exactly holds when $t = \\sqrt{t_1t_2}$.\n\nThe line $AP$ is given by $y = \\frac{t_1+t-x}{tt_1}$, and so the area of the region bounded by the hyperbola and $AP$ is\n\\[\n\\int_{t_1}^t \\left( \\frac{t_1+t-x}{tt_1} - \\frac{1}{x} \\right) \\,dx = \\frac{t}{2t_1}-\\frac{t_1}{2t}-\\log \\left(\\frac{t}{t_1} \\right),\n\\]\nwhich at $t = \\sqrt{t_1t_2}$ is equal to $\\frac{t_2-t_1}{2\\sqrt{t_1t_2}} - \\log(\\sqrt{t_2/t_1})$. Similarly, the area of the region bounded by the hyperbola and $PB$ is $\\frac{t_2}{2t}-\\frac{t}{2t_2}-\\log \\frac{t_2}{t}$, which at $t = \\sqrt{t_1t_2}$ is also $\\frac{t_2-t_1}{2\\sqrt{t_1t_2}} - \\log(\\sqrt{t_2/t_1})$, as desired.\n\n\\noindent\n\\textbf{Second solution:}\nFor any $\\lambda > 0$, the map $(x,y) \\mapsto (\\lambda x, \\lambda^{-1} y)$ preserves both areas and the hyperbola $xy=1$. We may thus rescale the picture so that\n$A,B$ are symmetric across the line $y=x$, with $A$ above the line. As $P$ moves from $A$ to $B$, the area of $APB$ increases until $P$ passes through the point $(1,1)$, then decreases. Consequently, $P = (1,1)$ achieves the maximum area, and the desired equality is obvious by symmetry.\nAlternatively, since the hyperbola is convex, the maximum is uniquely achieved at the point where the tangent line is parallel to $AB$, and by symmetry that point is $P$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2010",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "For any polynomial $p(x)$, let $[p(x)]A$ denote the $n\\times n$ matrix obtained by replacing each entry $A_{ij}$ of $A$ by $p(A_{ij})$; thus $A^{[k]} = [x^k]A$. Let $P(x) = x^n + a_{n-1}x^{n-1} + \\cdots + a_0$ denote the characteristic polynomial of $A$. By the Cayley-Hamilton theorem,\n\\begin{align*}\n0 &= A \\cdot P(A) \\\\\n&= A^{n+1} + a_{n-1}A^n+\\cdots+a_0 A \\\\\n&= A^{[n+1]}+a_{n-1}A^{[n]}+\\cdots + a_0 A^{[1]} \\\\\n&=[xp(x)]A.\n\\end{align*}\nThus each entry of $A$ is a root of the polynomial $xp(x)$.\n\nNow suppose $m \\geq n+1$. Then\n\\begin{align*}\n0 &= [x^{m+1-n}P(x)]A  \\\\\n&= A^{[m+1]} + a_{n-1} A^{[m]} + \\cdots + a_0 A^{[m+1-n]}\n\\end{align*}\nsince each entry of $A$ is a root of $x^{m+1-n}P(x)$. On the other hand,\n\\begin{align*}\n0 &= A^{m+1-n} \\cdot P(A) \\\\\n&= A^{m+1} + a_{n-1} A^m + \\cdots + a_0 A^{m+1-n}.\n\\end{align*}\nTherefore if $A^k = A^{[k]}$ for $m+1-n \\leq k \\leq m$, then $A^{m+1} = A^{[m+1]}$. The desired result follows by induction on $m$.\n\n\\textbf{Remark.}\nDavid Feldman points out that the result is best possible in the following sense: there exist\nexamples of $n \\times n$ matrices $A$ for which $A^k = A^{[k]}$ for $k=1,\\dots,n$ but $A^{n+1} \\neq A^{[n+1]}$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\2001",
+  "question_number": 6,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The answer is yes.  Consider the arc of the parabola\n$y=Ax^2$ inside the circle $x^2+(y-1)^2 = 1$, where we initially assume\nthat $A > 1/2$.  This intersects the circle in three points,\n$(0,0)$ and $(\\pm \\sqrt{2A-1}/A, (2A-1)/A)$.  We claim that for\n$A$ sufficiently large, the length $L$ of the parabolic arc between\n$(0,0)$ and $(\\sqrt{2A-1}/A, (2A-1)/A)$ is greater than $2$, which\nimplies the desired result by symmetry.  We express $L$ using the\nusual formula for arclength:\n\\begin{align*}\nL &= \\int_0^{\\sqrt{2A-1}/A} \\sqrt{1+(2Ax)^2} \\, dx \\\\\n&= \\frac{1}{2A} \\int_0^{2\\sqrt{2A-1}} \\sqrt{1+x^2} \\, dx \\\\\n&= 2 + \\frac{1}{2A} \\left( \\int_0^{2\\sqrt{2A-1}}\n(\\sqrt{1+x^2}-x)\\,dx -2\\right),\n\\end{align*}\nwhere we have artificially introduced $-x$ into the integrand in the\nlast step.  Now, for $x \\geq 0$,\n\\[\n\\sqrt{1+x^2}-x = \\frac{1}{\\sqrt{1+x^2}+x} > \\frac{1}{2\\sqrt{1+x^2}}\n\\geq \\frac{1}{2(x+1)};\n\\]\nsince $\\int_0^\\infty dx/(2(x+1))$ diverges, so does\n$\\int_0^\\infty (\\sqrt{1+x^2}-x)\\,dx$.  Hence, for sufficiently large\n$A$, we have $\\int_0^{2\\sqrt{2A-1}} (\\sqrt{1+x^2}-x)\\,dx > 2$,\nand hence $L > 2$.\n\nNote: a numerical computation shows that one must take $A > 34.7$ to\nobtain $L > 2$, and that the maximum value of $L$ is about\n$4.0027$, achieved for $A \\approx 94.1$."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2001",
+  "question_number": "6",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Yes, there must exist infinitely many such $n$.\nLet $S$ be the convex hull of the set of points $(n,\na_n)$ for $n \\geq 0$. Geometrically, $S$ is the intersection of\nall convex sets (or even all halfplanes) containing the points\n$(n, a_n)$; algebraically, $S$ is the set of points $(x,y)$\nwhich can be written as $c_1(n_1, a_{n_1}) + \\cdots + c_k(n_k, a_{n_k})$\nfor some $c_1, \\dots, c_k$ which are nonnegative of sum 1.\n\nWe prove that for infinitely many $n$, $(n, a_n)$ is a vertex on the upper\nboundary of $S$, and that these $n$ satisfy the given\ncondition. The condition that $(n, a_n)$ is a vertex on the upper\nboundary of $S$ is equivalent to the existence of a line passing through\n$(n, a_n)$ with all other points of $S$ below it.\nThat is, there should exist $m>0$ such that\n\\begin{equation} \\label{eq1}\na_k < a_n + m(k-n) \\qquad \\forall k \\geq 1.\n\\end{equation}\n\nWe first show that $n=1$ satisfies (\\ref{eq1}). The condition\n$a_k/k \\to 0$ as $k \\to \\infty$\nimplies that $(a_k - a_1)/(k-1) \\to 0$ as well. Thus the\nset $\\{(a_k-a_1)/(k-1)\\}$ has an upper bound $m$, and now\n$a_k \\leq a_1 + m(k-1)$, as desired.\n\nNext, we show that given one $n$ satisfying (\\ref{eq1}), there exists a\nlarger one also satisfying (\\ref{eq1}). Again, the condition\n$a_k/k \\to 0$ as $k \\to \\infty$ implies that $(a_k-a_n)/(k-n) \\to 0$ as\n$k \\to \\infty$. Thus the sequence $\\{(a_k-a_n)/(k-n)\\}_{k>n}$ has a\nmaximum element; suppose $k = r$ is the largest value that\nachieves this maximum, and put\n$m = (a_r -a_n)/(r-n)$. Then the line through\n$(r, a_r)$ of slope $m$ lies strictly above $(k, a_k)$ for $k > r$\nand passes through or lies above $(k, a_k)$ for $k< r$.\nThus (\\ref{eq1})\nholds for $n=r$ with $m$ replaced by $m-\\epsilon$ for suitably small\n$\\epsilon > 0$.\n\nBy induction, we have that (\\ref{eq1}) holds for infinitely many $n$.\nFor any such $n$ there exists $m>0$ such that for $i=1, \\dots, n-1$, the\npoints $(n-i, a_{n-i})$ and $(n+i, a_{n+i})$ lie below the line through\n$(n, a_n)$ of slope $m$. That means $a_{n+i} < a_n + mi$\nand $a_{n-i} < a_n - mi$; adding these together gives\n$a_{n-i} + a_{n+i} < 2a_n$, as desired."
+    }
+  ]
+}

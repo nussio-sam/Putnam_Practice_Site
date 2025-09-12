@@ -1,0 +1,12 @@
+{
+  "year": "C:/Users/nussis/Putnam_Practice_Site/backend/tex_files\\2001",
+  "question_number": 1,
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Let $R$ (resp.\\ $B$) denote the set of red (resp.\\ black) squares in\nsuch a coloring, and for $s\\in R\\cup B$, let $f(s)n+g(s)+1$ denote the\nnumber written in square $s$, where $0\\leq f(s),g(s)\\leq n-1$.\nThen it is clear that the value of $f(s)$ depends only on the row of\n$s$, while the value of $g(s)$ depends only on the column of $s$.  Since\nevery row contains exactly $n/2$ elements of $R$ and $n/2$ elements of $B$,\n\\[ \\sum_{s\\in R} f(s) = \\sum_{s\\in B} f(s) .\\]\nSimilarly, because every column contains exactly $n/2$ elements of $R$ and\n$n/2$ elements of $B$,\n\\[ \\sum_{s\\in R} g(s) = \\sum_{s\\in B} g(s) .\\]\nIt follows that\n\\[\\sum_{s\\in R} f(s)n+g(s)+1 = \\sum_{s\\in B} f(s)n+g(s)+1,\\]\nas desired.\n\nNote: Richard Stanley points out a theorem of Ryser (see Ryser,\n\\textit{Combinatorial Mathematics}, Theorem~3.1) that can also be applied.\nNamely, if $A$ and $B$ are $0-1$ matrices with the same row and column\nsums, then there is a sequence of operations on $2 \\times 2$ matrices\nof the form\n\\[\n\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} \\to\n\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}\n\\]\nor vice versa, which transforms $A$ into $B$. If we identify 0 and 1 with\nred and black, then the given coloring and the checkerboard coloring\nboth satisfy the sum condition. Since the desired result is clearly\ntrue for the checkerboard coloring, and performing the matrix operations\ndoes not affect this, the desired result follows in general."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "year": "2006",
+  "question_number": "2",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "Suppose on the contrary that the set $B$ of values of $n$ for which Bob\nhas a winning strategy is finite; for convenience, we include $n=0$ in $B$,\nand write $B = \\{b_1, \\dots, b_m\\}$.\nThen for every nonnegative integer $n$ not\nin $B$, Alice must have some move on a heap of $n$ stones leading to a\nposition in which the second player wins. That is, every nonnegative integer\nnot in $B$ can be written as $b + p - 1$ for some $b \\in B$ and some prime\n$p$. However, there are numerous ways to show that this cannot happen.\n\n\\textbf{First solution:}\nLet $t$ be any integer bigger than all of the $b \\in B$. Then it is easy to\nwrite down $t$ consecutive composite integers, e.g., $(t+1)! + 2, \\dots,\n(t+1)! + t+1$. Take $n = (t+1)! + t$; then for each $b \\in B$,\n$n - b + 1$ is one of the composite integers we just wrote down.\n\n\\textbf{Second solution:}\nLet $p_1, \\dots, p_{2m}$ be\nany prime numbers; then by the Chinese remainder theorem, there exists a\npositive integer $x$ such that\n\\begin{align*}\nx - b_1 &\\equiv -1 \\pmod{p_1 p_{m+1}} \\\\\n\\dots \\\\\nx - b_n &\\equiv -1 \\pmod{p_m p_{2m}}.\n\\end{align*}\nFor each $b \\in B$,\nthe unique integer $p$ such that $x=b+p-1$ is divisible\nby at least two primes, and so cannot itself be prime.\n\n\\textbf{Third solution:} (by Catalin Zara)\nPut $b_1 = 0$, and take $n = (b_2 - 1)\\cdots(b_m - 1)$; then $n$ is\ncomposite because $3, 8 \\in B$, and for any nonzero $b \\in B$,\n$n - b_i + 1$ is divisible by but not equal to $b_i - 1$.\n(One could also take $n = b_2 \\cdots b_m - 1$, so that\n$n-b_i+1$ is divisible by $b_i$.)"
+    }
+  ]
+}

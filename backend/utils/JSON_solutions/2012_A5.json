@@ -1,0 +1,12 @@
+{
+  "year": "2012",
+  "question_number": "5",
+  "domain": "Putnam",
+  "statement": "",
+  "solution": [
+    {
+      "hint_level": 0,
+      "content": "The pairs $(p,n)$ with the specified property are those pairs with $n=1$, together with the single pair\n$(2,2)$. We first check that these do work. For $n=1$, it is clear that taking $v = (1)$ and $M = (0)$\nhas the desired effect. For $(p,n) = (2,2)$, we take $v = \\begin{pmatrix} 0 & 1 \\end{pmatrix}$\nand $M = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ and then observe that\n\\[\nG^{(k)}(0) = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix},\n\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix},\n\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix},\n\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}, \\,\nk=0,1,2,3.\n\\]\nWe next check that no other pairs work, keeping in mind that the desired condition means that\n$G$ acts on $\\FF_p^n$ as a cyclic permutation. Assume by way of contradiction that $(p,n)$ has the desired\nproperty but does not appear in our list. In particular, we have $n \\geq 2$.\n\nLet $I$ be the $n \\times n$ identity matrix over $\\FF_p$.\nDecompose $\\FF_p^n$ as a direct sum of two subspaces $V,W$ such that\n$M-I$ is nilpotent on $V$ and invertible on $W$. Suppose that $W \\neq 0$.\nSplit $v$ as $v_1 + v_2$ with $v_1 \\in V$, $v_2 \\in W$. Since $M-I$ is invertible on $W$, there exists a\nunique $w \\in W$ such that $(M-I)w = -v_2$. Then $G^{(k)}(w) - w \\in V$ for all nonnegative integers $k$.\nLet $k$ be the least positive integer such that $G^{(k)}(w) = w$; then $k$ is at most the cardinality of $V$,\nwhich is strictly less than $p^n$ because $W \\neq 0$. This gives a contradiction and thus forces $W = 0$.\n\nIn other words, the matrix $N = M-I$ is nilpotent; consequently, $N^n = 0$.\nFor any positive integer $k$, we have\n\\begin{align*}\nG^{(k)}(0) &= v + Mv + \\cdots + M^{k-1}v \\\\\n&=  \\sum_{j=0}^{k-1}  \\sum_{i=0}^{n-1} \\binom{j}{i} N^i v \\\\\n&= \\sum_{i=0}^{n-1} \\binom{k}{i+1} N^i v.\n\\end{align*}\nIf $n \\geq 2$ and $(p,n) \\neq (2,2)$, then $p^{n-1} > n$ and so $G^{k}(0) = 0$ for $k = p^{n-1}$ (because all\nof the binomial coefficients are divisible by $p$). This contradiction\ncompletes the proof."
+    }
+  ]
+}
