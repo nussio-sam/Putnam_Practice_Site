@@ -61,6 +61,7 @@ class QAView(APIView):
         serializer = QAReqSerializer(data = req.data)
 
         if serializer.is_valid():
+            #More pyright trickery (SCREW YOU STATIC LSPs ON DYNAMIC BACKENDS)
             validated_data = cast(Dict[str, Any], serializer.validated_data)
 
             question = validated_data['question']
@@ -89,7 +90,7 @@ class QAView(APIView):
                 )
         
         return Response(
-            serializers.errors, #type: ignore
+            serializer.errors, 
             status = status.HTTP_400_BAD_REQUEST
         )
 
