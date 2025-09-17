@@ -18,12 +18,12 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class ProblemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Problem
-        id = ['id', 'year', 'question_number', 'domain', 'statement']
+        fields = ['id', 'year', 'question_number', 'domain', 'statement']
 
 class SolutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Solution
-        id = ['id', 'problem', 'hint_level', 'content', 'created_at']
+        fields = ['id', 'problem', 'content', 'created_at']
 
 # Serializers for HuggingFace req/res models
 
@@ -63,4 +63,4 @@ class ProblemQAResultSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'problem', 'solution_level', 'std_question', 'gen_answer', 'confidence', 'created_at'
         ]
-        read_only_fields = ['id', 'created_at']
+        read_only_fields = ['id',]

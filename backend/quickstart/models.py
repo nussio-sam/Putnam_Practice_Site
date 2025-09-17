@@ -12,7 +12,6 @@ class Problem(models.Model):
 
 class Solution(models.Model):
     problem = models.ForeignKey(Problem, related_name = 'solutions', on_delete = models.CASCADE)
-    hint_level = models.IntegerField()
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add = True)
 
