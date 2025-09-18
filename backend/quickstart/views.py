@@ -68,20 +68,25 @@ class QAView(APIView):
 
             try:
                 result = qa_service.answer_question(question, context)
+                
 
-                response_data = {
-                        'answer': result['answer'],
-                        'confidence': result['confidence'],
-                        'start': result['start'],
-                        'end': result['end'],
-                        'question': question,
-                        'context': context
-                    }
+                #I originally had response_data, but that was JUST for the HTTP response
+                #This will help actually store in the database, so it uses a ModelSerializer instead of just a serializer
+                session_data = {
+                    'question': question,
+                    'question_context': context,
+                    'answer': result['answer'],
+                    'confidence': result['confidence'],
+                }
 
-                return Response(
-                        QAResSerializer(response_data).data,
-                        status = status.HTTP_200_OK
-                    )
+                session_serializer = QASessionSerializer(data = session_data)
+                if session_serializer.is_valid():
+                    session_serializer.save()
+
+                    return Response(session_serializer.data, status = status.HTTP_201_CREATED)
+                else:
+                    return Response(session_serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+
             except Exception as exc:
                 return Response(
                     {'error': f"Model Inference failure: {str(exc)}"},

@@ -16,7 +16,7 @@ class Solution(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
-        return f"Solution for {self.problem} (Level {self.hint_level}"
+        return f"Solution for {self.problem}"
 
 # 
 class QASession(models.Model):
