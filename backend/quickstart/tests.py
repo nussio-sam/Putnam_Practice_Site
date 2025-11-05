@@ -128,6 +128,18 @@ class SolutionAPITest(TestCase):
         
         self.list_url = reverse('solution-list')
         self.detail_url = reverse('solution-detail', args=[self.solution.id] ) # type: ignore
+    def test_list_solutions(self):
+        response = self.client.get(self.list_url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.json()), 1)
+
+    def test_list_detail(self):
+        response = self.client.get(self.detail_url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.json()), 1)
+
+        self.assertEqual(response.json()['problem'], self.foreign_problem )
+
 
 
 
